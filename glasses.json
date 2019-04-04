@@ -1,0 +1,37 @@
+[{
+        "id": 1,
+        "name": "Aviator",
+        "price": 1000,
+        "inStock": 7,
+        "img": "images/aviator.png"
+    },
+    {
+        "id": 2,
+        "name": "Wayfarer",
+        "price": 1500,
+        "inStock": 12,
+        "img": "images/wayfarer3.png"
+        
+    },
+    {
+        "id": 3,
+        "name": "Club",
+        "price": 1200,
+        "inStock": 3,
+        "img": "images/"
+    },
+    {
+        "id": 4,
+        "name": "Rayban",
+        "price": 1400,
+        "inStock": 5,
+        "img": ""
+    },
+    {
+        "id": 5,
+        "name": "Rayban",
+        "price": 1500,
+        "inStock": 10,
+        "img": ""
+    }
+]
