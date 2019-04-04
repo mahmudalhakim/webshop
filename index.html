@@ -5,73 +5,241 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
     <title>Sunglasses</title>
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="nav">
-        <h1>Sunkissed and fabulous</h1>
-        <img src="logo.svg" alt="Logo">
-        <ul>
-            <li>Rayban</li>
-            <li>Wayfarer</li>
-            <li>Classic</li>
-            <li>Club</li>
-            <li>Original</li>
+    <header>
+
+        <nav class="nav-extended light">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo h2 center uppercase ">Sunkissed and fabulous</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i
+                                    class="material-icons">shopping_cart</i></a></li>
+                        <li><a href="sass.html"></a></li>
+                    </ul>
+                </div>
+                <div class="nav-content hide-on-med-and-down">
+                    <ul class="tabs tabs-transparent">
+                        <li class="tab"><a href="#test1">Rayban</a></li>
+                        <li class="tab"><a class="active" href="#test2">Wayfarer</a></li>
+                        <li class="tab"><a href="#test3">Classic</a></li>
+                        <li class="tab"><a href="#test4">Club</a></li>
+                        <li class="tab"><a href="#test4">Original</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <a href="#" class="brand-logo h2 align-center uppercase">Sunkissed and fabulous</a>
+            <li class="tab"><a href="#test1">Rayban</a></li>
+            <li class="tab"><a class="active" href="#test2">Wayfarer</a></li>
+            <li class="tab"><a href="#test3">Classic</a></li>
+            <li class="tab"><a href="#test4">Club</a></li>
+            <li class="tab"><a href="#test4">Original</a></li>
         </ul>
-        <hr>
-    </div>
 
-    <div id="header">
-        <figure> <img src="./images/index-pic2.jpg" alt="Image of two dog with sunglasses" width=1000>
-            <figcaption>Do as Fred & Perry, be a cool dog!</figcaption>
-        </figure>
-    </div>
+        <!-- Dropdown Structure -->
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#!">one</a></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">three</a></li>
+        </ul>
+    </header>
 
-    <div class="items-green">
-        <img src="./images/aviator.png" alt="Sunglasses Aviator 1000kr">
-        <h3>Aviator</h3>
-        <h4>1000 SEK</h4>
-        <input class="input-green" type="text">
-        <button class="btn-green">Buy Now</button>
-    </div>
+    <main>
+        <div class="container">
+            <div id="header">
+                <figure> <img class="responsive-img hero-img" src="./images/index-pic2.png"
+                        alt="Image of two dog with sunglasses">
+                    <h1 class="center">Do as Fred & Perry, be a cool dog!</h1>
+                </figure>
+            </div>
 
-    <div class="items-green">
-        <img src="./images/wayfarer3.png" alt="Sunglasses Wayfarers 1500kr">
-        <h3>Wayfarer</h3>
-        <h4>1500 SEK</h4>
-        <input class="input-green" type="text">
-        <button class="btn-green">Buy Now</button>
-    </div>
+            <div class="line">
+                <span>
+                    <h4>Shop the latest news</h>
+                </span>
+            </div>
 
-    <div class="items-green">
-        <img src="./images/wayfarer2.png" alt="Sunglasses Clubmaster 1200kr">
-        <h3>Club</h3>
-        <h4>1200 SEK</h4>
-        <input class="input-green" type="text">
-        <button class="btn-green">Buy Now</button>
-    </div>
 
-    <div class="items-apricot">
-        <img src="./images/wayfarer.png" alt="Sunglasses Rayban 1400kr">
-        <h3>Rayban</h3>
-        <h4>1400 SEK</h4>
-        <input class="input-green" type="text">
-        <button class="btn-apricot">Buy Now</button>
-    </div>
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/aviator.png">
+                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i
+                                    class="material-icons">favorite_border</i></a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Card Title</span>
 
-    <div class="items-apricot">
-        <img src="./images/classic.png" alt="Sunglasses Classic 1000kr">
-        <h3>Rayban</h3>
-        <h4>1000 SEK</h4>
-        <input class="input-green" type="text">
-        <button class="btn-apricot">Buy Now</button>
-    </div>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am
+                                convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">1000kr</a>
+                            <a href="#" class="waves-effect waves-light btn selling-btn">Buy now</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/classic.png">
+
+                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i
+                                    class="material-icons">favorite_border</i></a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am
+                                convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/wayfarer.png">
+                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i
+                                    class="material-icons">favorite_border</i></a>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am
+                                convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <!-- 
+
+
+                <div class="items-green">
+                    <img src="./images/aviator.png" alt="Sunglasses Aviator 1000kr">
+                    <h3>Aviator</h3>
+                    <h4>1000 SEK</h4>
+                    <input class="input-green" type="text">
+                    <button class="btn-green">Buy Now</button>
+                </div>
+
+                <div class="items-green">
+                    <img src="./images/wayfarer3.png" alt="Sunglasses Wayfarers 1500kr">
+                    <h3>Wayfarer</h3>
+                    <h4>1500 SEK</h4>
+                    <input class="input-green" type="text">
+                    <button class="btn-green">Buy Now</button>
+                </div>
+
+                <div class="items-green">
+                    <img src="./images/wayfarer2.png" alt="Sunglasses Clubmaster 1200kr">
+                    <h3>Club</h3>
+                    <h4>1200 SEK</h4>
+                    <input class="input-green" type="text">
+                    <button class="btn-green">Buy Now</button>
+                </div>
+
+                <div class="items-apricot">
+                    <img src="./images/wayfarer.png" alt="Sunglasses Rayban 1400kr">
+                    <h3>Rayban</h3>
+                    <h4>1400 SEK</h4>
+                    <input class="input-green" type="text">
+                    <button class="btn-apricot">Buy Now</button>
+                </div>
+
+                <div class="items-apricot">
+                    <img src="./images/classic.png" alt="Sunglasses Classic 1000kr">
+                    <h3>Rayban</h3>
+                    <h4>1000 SEK</h4>
+                    <input class="input-green" type="text">
+                    <button class="btn-apricot">Buy Now</button>
+                </div>
+            </div> -->
+
+    </main>
+    <footer>
+        <div class="container">
+
+            <div class="line-coral">
+                <span>
+                    <h4>Do you like our style?</h>
+                </span>
+            </div>
+        </div>
+        <div class="footer"></div>
+
+    </footer>
+
+    <footer class="page-footer dusty-coral">
+        <div class="container">
+            <div class="row">
+                <div class="col l4 s12">
+                    <h5 class="deep-orange-text text-lighten-2">Visit us!</h5>
+                    <address>
+                        <p class="deep-orange-text text-darken-1">Drottninggatan 92-94, 111 36 Stockholm</p>
+                    </address>
+                </div>
+                <div class="col l4 s12">
+                    <h5 class="deep-orange-text text-lighten-2">Contact us!</h5>
+                    <ul>
+                        <li><a class="deep-orange-text text-darken-1" href="mailto:fred@sunkissed.com">fred@sunkissed.com</a></li>
+                        <li><a class="deep-orange-text text-darken-1" href="mailto:perry@sunkissed.com">perry@sunkissed.com/a></li>
+                        <li><a class="deep-orange-text text-darken-1" href="phone:08123345">08 123 345</a></li>
+                    </ul>
+                </div>
+                <div class="col l4 s12">
+                    <h5 class="deep-orange-text text-lighten-2">Links</h5>
+                    <ul>
+                        <li><a class="deep-orange-text text-darken-1" href="#!">Link 1</a></li>
+                        <li><a class="deep-orange-text text-darken-1" href="#!">Link 2</a></li>
+                        <li><a class="deep-orange-text text-darken-1" href="#!">Link 1</a></li>
+                        <li><a class="deep-orange-text text-darken-1" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2014 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+    s
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
     </script>
     <script src="main.js"></script>
+    <script src="js/materialize.js"></script>
+
 </body>
 
 </html>

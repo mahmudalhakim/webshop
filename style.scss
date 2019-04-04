@@ -7,8 +7,183 @@ $dusy-coral: #FECEA8;
 $coral: #FF847C;
 $pink: #E84A5F;
 $teal: #2A363B;
-
+$bodyfont: "poppins";
 // Grid template
 * {
     margin: 0;
+}
+html {
+    font-family: $bodyfont;
+}
+
+nav>a {
+    color: black !important;
+}
+
+h1 {
+    font-size:2.5rem;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+figure {
+    margin: 10px 0 0 0;
+
+    .hero-img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.selling-btn {
+    float:right;
+  
+}
+
+
+.line {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap; 
+    margin:20px;
+    h4 {
+        margin:0;
+        font-size:1.5rem;
+    }
+}
+
+.line > span {
+    position: relative;
+    display: inline-block;
+}
+
+.line > span:before,
+.line > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 3px;
+    background: $dusty-green;
+}
+
+.line > span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.line > span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+//TODO EN GENERELL LINE
+
+.line-coral {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap; 
+    margin:20px;
+    h4 {
+        margin:0;
+        font-size:1.5rem;
+        color:$coral;
+    }
+}
+
+.line-coral > span {
+    position: relative;
+    display: inline-block;
+}
+
+.line-coral > span:before,
+.line-coral > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 3px;
+    background: $dusy-coral;
+}
+
+.line-coral > span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.line-coral > span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+
+
+
+.card-title {
+    display:block;
+    color:black;
+}
+
+.selling-btn {
+    float: right;
+    top: -7px;
+    position: relative;
+    padding: 0 30px;
+}
+
+.card-image {
+    background-color:$dusty-green;
+    padding:40px 0;
+    min-height:250px;
+    .card-action {
+        background-color:white;
+    }
+}
+
+.dusty-green {
+    background-color: $dusty-green;
+}
+.dusty-coral {
+    background-color: $dusy-coral;
+}
+.coral {
+    background-color: $coral;
+}
+.pink {
+    background-color: $pink;
+}
+.teal {
+    background-color: $teal;
+}
+
+
+//Footer
+.footer {
+    width:100vw;
+    height:400px;
+    background-color: $dusty-coral;
+    
+}
+address{
+    font-style: normal !important; 
+}
+
+
+@media (max-width:900px) {
+    .hero-img {
+        height:400px !important;
+    }
+}
+@media(max-width:500px) {
+    .h2 {
+        font-size: 1.1rem !important;
+    }
+    .hero-img {
+        height:300px !important;
+    }
+
 }

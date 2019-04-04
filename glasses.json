@@ -1,37 +1,41 @@
 [{
         "id": 1,
-        "name": "Aviator",
+        "title": "Aviator",
         "price": 1000,
         "inStock": 7,
-        "img": "images/aviator.png"
+        "img": "images/aviator.png", 
+        "description": "Lorem Ipsum"
     },
     {
         "id": 2,
-        "name": "Wayfarer",
+        "title": "Wayfarer",
         "price": 1500,
         "inStock": 12,
-        "img": "images/wayfarer3.png"
-        
+        "img": "images/wayfarer3.png", 
+        "description": "Lorem Ipsum"
     },
     {
         "id": 3,
-        "name": "Club",
+        "title": "Club",
         "price": 1200,
         "inStock": 3,
-        "img": "images/"
+        "img": "images/", 
+        "description": "Lorem Ipsum"
     },
     {
         "id": 4,
-        "name": "Rayban",
+        "title": "Rayban",
         "price": 1400,
         "inStock": 5,
-        "img": ""
+        "img": "", 
+        "description": "Lorem Ipsum"
     },
     {
         "id": 5,
-        "name": "Rayban",
+        "title": "Rayban",
         "price": 1500,
         "inStock": 10,
-        "img": ""
+        "img": "", 
+        "description": "Lorem Ipsum"
     }
 ]
