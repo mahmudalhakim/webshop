@@ -32,19 +32,39 @@ För VG - nivå ska ni dessutom arbeta med följande
 12. Man ska kunna tömma varukorgen.
 13. Vid beställning visa bekräftelse på skärmen med alla detaljer om köpet inkl.bilder.
 */
-
-// Cashing variabler
-const cartBtn = document.querySelector('.selling-btn');
-const emptyCartBtn = document.querySelector('.?');
-
-// Kundvagn array
-let cart = [];
-
-
-
 $(document).ready(function () {
-    // När man klickar på knappen ska varan läggas i korgen
-    $('selling-btn').click(function () {
-        $('.demo1').show(300);
-    });
-});
+    cartRepository.init(); // document ready, första som körs. Se user status om personen har varit inne tidigare. Kolla i lokal storage. 
+})
+
+let cartRepository = (function () {
+    let init = function () {
+        checkCart();
+        ls.setItem("hej", "hej")
+    }
+
+    function checkCart() {
+        checkCartStatus = Object.keys(localStorage).length;
+        checkCartStatus = null ? "0" : checkCartStatus;
+        $('#cart-items').text(checkCartStatus)
+        // cartItems.text(checkCartStatus);
+    }
+
+    // Cashing variabler
+    // const cartBtn = document.querySelector('.selling-btn');
+    // const emptyCartBtn = document.querySelector('.?');
+
+    // Kundvagn array
+    let cart = [];
+
+
+    // $(document).ready(function () {
+    //     // När man klickar på knappen ska varan läggas i korgen
+    //     $('selling-btn').click(function () {
+    //         $('.demo1').show(300);
+    //     });
+
+    return {
+        init: init,
+    }
+
+})();
