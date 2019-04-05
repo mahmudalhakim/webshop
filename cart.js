@@ -42,12 +42,9 @@ let cart = [];
 
 
 
-$(document).ready(function() {
-// När man klickar på knappen ska varan läggas i korgen
-$('selling-btn').click(function () {
-    $('.demo1').show(300);
-});
-
-
-
+$(document).ready(function () {
+    // När man klickar på knappen ska varan läggas i korgen
+    $('selling-btn').click(function () {
+        $('.demo1').show(300);
+    });
 });
