@@ -7,13 +7,39 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
-nav > a {
-  color: black !important;
+nav.nav-extended {
+  background-color: white;
+}
+
+nav.nav-extended .nav-wrapper {
+  min-height: 100px;
+}
+
+nav.nav-extended a {
+  color: #2A363B !important;
+}
+
+ul a {
+  font-family: 'Poppins', sans-serif;
 }
 
 h1 {
   font-size: 2.5rem;
   font-family: "Molle", cursive;
+  color: #FF847C;
+}
+
+footer h5 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #FF847C;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #E84A5F;
 }
 
 .uppercase {
@@ -21,13 +47,20 @@ h1 {
 }
 
 figure {
-  margin: 10px 0 0 0;
+  margin: 5% 0% 0% 0%;
 }
 
 figure .hero-img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.brand-logo {
+  margin: 2% 0% 0% 0%;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 110%;
 }
 
 .selling-btn {
@@ -47,7 +80,7 @@ figure .hero-img {
   font-size: 1.5rem;
 }
 
-.line > span {
+.line span {
   position: relative;
   display: inline-block;
 }
@@ -62,7 +95,7 @@ figure .hero-img {
   background: #99B898;
 }
 
-.line > span:before {
+.line span:before {
   right: 100%;
   margin-right: 15px;
 }
@@ -124,7 +157,8 @@ figure .hero-img {
 }
 
 .card-image {
-  background-color: #99B898;
+  background: -webkit-gradient(linear, left bottom, left top, from(#99b898), to(#c9ddc9));
+  background: linear-gradient(to top, #99b898 0%, #c9ddc9 100%);
   padding: 40px 0;
   min-height: 250px;
 }
@@ -160,6 +194,7 @@ figure .hero-img {
 }
 
 address {
+  color: #E84A5F;
   font-style: normal !important;
 }
 

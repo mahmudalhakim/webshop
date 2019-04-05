@@ -7,8 +7,10 @@ $dusty-coral: #FECEA8;
 $coral: #FF847C;
 $pink: #E84A5F;
 $teal: #2A363B;
-$bodyfont: 'Poppins', sans-serif;
-$decorativefont: 'Molle', cursive;
+$bodyfont: 'Poppins',
+sans-serif;
+$decorativefont: 'Molle',
+cursive;
 
 * {
     margin: 0;
@@ -18,21 +20,56 @@ html {
     font-family: $bodyfont;
 }
 
-nav>a {
-    color: black !important;
+nav.nav-extended {
+    .nav-wrapper {
+        min-height: 100px;
+    }
+
+    background-color: white;
+
+    a {
+        color: $teal !important;
+    }
+}
+
+ul {
+    a {
+        font-family: 'Poppins', sans-serif;
+    }
 }
 
 h1 {
     font-size: 2.5rem;
     font-family: $decorativefont;
+    color: $coral;
 }
+
+footer {
+    h5 {
+        text-align: center;
+        font-size: 2rem;
+        font-family: $bodyfont;
+        font-weight: 700;
+        color: $coral;
+    }
+    ul {
+        li {
+            a {
+                text-decoration: none;
+                color: $pink;
+            }
+        }
+    }
+}
+
+
 
 .uppercase {
     text-transform: uppercase;
 }
 
 figure {
-    margin: 10px 0 0 0;
+    margin: 5% 0% 0% 0%;
 
     .hero-img {
         width: 100%;
@@ -40,6 +77,12 @@ figure {
     }
 }
 
+.brand-logo {
+    margin: 2% 0% 0% 0%;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 110%;
+}
 
 .selling-btn {
     float: right;
@@ -60,9 +103,11 @@ figure {
     }
 }
 
-.line>span {
-    position: relative;
-    display: inline-block;
+.line {
+    span {
+        position: relative;
+        display: inline-block;
+    }
 }
 
 .line>span:before,
@@ -75,9 +120,11 @@ figure {
     background: $dusty-green;
 }
 
-.line>span:before {
-    right: 100%;
-    margin-right: 15px;
+.line {
+    span:before {
+        right: 100%;
+        margin-right: 15px;
+    }
 }
 
 .line>span:after {
@@ -142,7 +189,7 @@ figure {
 }
 
 .card-image {
-    background-color: $dusty-green;
+    background: linear-gradient(to top, #99b898 0%, #c9ddc9 100%);
     padding: 40px 0;
     min-height: 250px;
 
@@ -181,6 +228,7 @@ figure {
 }
 
 address {
+    color: $pink;
     font-style: normal !important;
 }
 
