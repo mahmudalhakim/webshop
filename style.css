@@ -1,11 +1,10 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Molle:400i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 * {
   margin: 0;
 }
 
 html {
-  font-family: "poppins";
+  font-family: "Poppins", sans-serif;
 }
 
 nav > a {
@@ -14,6 +13,7 @@ nav > a {
 
 h1 {
   font-size: 2.5rem;
+  font-family: "Molle", cursive;
 }
 
 .uppercase {
@@ -111,7 +111,7 @@ figure .hero-img {
   margin-left: 15px;
 }
 
-.card-title  {
+.card-title {
   display: block;
   color: black;
 }
@@ -151,6 +151,16 @@ figure .hero-img {
 
 .teal {
   background-color: #2A363B;
+}
+
+.footer {
+  width: 100vw;
+  height: 400px;
+  background-color: #FECEA8;
+}
+
+address {
+  font-style: normal !important;
 }
 
 @media (max-width: 900px) {

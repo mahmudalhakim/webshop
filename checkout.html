@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Checkout</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <!-- Navigation start -->
+        <nav class="nav-extended light">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo h2 center uppercase ">Sunkissed and fabulous</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i
+                                    class="material-icons">shopping_cart</i></a></li>
+                        <li><a class="cart-items" href="#"></a></li>
+                    </ul>
+                </div>
+                <div class="nav-content hide-on-med-and-down">
+                    <ul class="tabs tabs-transparent">
+                        <li class="tab"><a href="#test1">Rayban</a></li>
+                        <li class="tab"><a class="active" href="#test2">Wayfarer</a></li>
+                        <li class="tab"><a href="#test3">Classic</a></li>
+                        <li class="tab"><a href="#test4">Club</a></li>
+                        <li class="tab"><a href="#test4">Original</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navigation slut -->
+
+        <ul class="sidenav" id="mobile-demo">
+            <a href="#" class="brand-logo h2 align-center uppercase">Sunkissed and fabulous</a>
+            <li class="tab"><a href="#test1">Rayban</a></li>
+            <li class="tab"><a class="active" href="#test2">Wayfarer</a></li>
+            <li class="tab"><a href="#test3">Classic</a></li>
+            <li class="tab"><a href="#test4">Club</a></li>
+            <li class="tab"><a href="#test4">Original</a></li>
+        </ul>
+
+        <!-- Dropdown Structure -->
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#!">one</a></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">three</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="container">
+            <h5>Din kundvagn innehåller:</h5>
+
+            <div id="displayCart">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Glasses</th>
+                            <th>Item Description</th>
+                            <th>Item Price</th>
+                        </tr>
+                    </thead>
+                
+                    <tbody>
+                        <tr>
+                            <td>Image of Aviator</td>
+                            <td>Toned glass</td>
+                            <td>1000kr(Hämta info från JSON)</td>
+                        </tr>
+                        <tr>
+                            <td>Image of Club</td>
+                            <td>Latest clubmasters</td>
+                            <td>1200kr(Hämta Info från JSON)</td>
+                        </tr>
+                        <tr>
+                            <td>Image of Originals</td>
+                            <td>Classic Original</td>
+                            <td>1100kr (Hämta info från JSON)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+
+
+    </main>
+    <footer>
+        <div class="container">
+
+            <div class="line-coral">
+                <span>
+                    <h4>Do you like our style?</h>
+                </span>
+            </div>
+        </div>
+        <div class="footer"></div>
+
+    </footer>
+
+    <footer class="page-footer dusty-coral">
+        <div class="container">
+            <div class="row">
+                <div class="col l4 s12">
+                    <h5 class="deep-orange-text text-lighten-2">Visit us!</h5>
+                    <address>
+                        <p class="deep-orange-text text-darken-1">Drottninggatan 92-94, 111 36 Stockholm</p>
+                    </address>
+                </div>
+                <div class="col l4 s12">
+                    <h5 class="deep-orange-text text-lighten-2">Contact us!</h5>
+                    <ul>
+                        <li><a class="deep-orange-text text-darken-1"
+                                href="mailto:fred@sunkissed.com">fred@sunkissed.com</a></li>
+                        <li><a class="deep-orange-text text-darken-1"
+                                href="mailto:perry@sunkissed.com">perry@sunkissed.com/a></li>
+                        <li><a class="deep-orange-text text-darken-1" href="phone:08123345">08 123 345</a></li>
+                    </ul>
+                </div>
+                <div class="col l4 s12">
+                    <h5 class="deep-orange-text text-lighten-2">Links</h5>
+                    <ul>
+                        <li><a class="deep-orange-text text-darken-1" href="#!">Link 1</a></li>
+                        <li><a class="deep-orange-text text-darken-1" href="#!">Link 2</a></li>
+                        <li><a class="deep-orange-text text-darken-1" href="#!">Link 1</a></li>
+                        <li><a class="deep-orange-text text-darken-1" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2014 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="main.js"></script>
+    <script src="js/materialize.js"></script>
+
+</body>
+
+</html>
