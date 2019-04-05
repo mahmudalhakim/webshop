@@ -34,30 +34,49 @@ För VG - nivå ska ni dessutom arbeta med följande
 */
 $(document).ready(function () {
     cartRepository.init(); // document ready, första som körs. Se user status om personen har varit inne tidigare. Kolla i lokal storage. 
+
 })
 
 let cartRepository = (function () {
+
+    let init = function () {
+        checkCartCount();
+    }
+
+// Vid klick, skicka objektet till lokalstorage
+    // Click 
+        $('.selling-btn').on('click', function () {
+            alert('The button was clicked, and soon the item will appear on your shopping cart')
+            let inputValue = '10';
+            //addera item (object) i shopping cart
+            ls.setItem('items', inputValue);
+            console.log(ls.getItem('items'));
+        });
     
-            let init = function () {
-                checkCartCount();
-            }
+    // Kollar om det ligger nått i kundvagnen
+    function checkCartCount() {
+        console.log('hej');
+        let checkCartStatus = Object.keys(localStorage).length; // Hämtar objekt från local storage, om det finns nått där
+        let cartItems = $('#cart-items'); // hämtar bara platsen
+        checkCartStatus == null ? 0 : checkCartStatus // Kollar hur många nycklar som finn i varukorgen sen tidigare, dvs hur många varor som finns i korgen. 
+        cartItems.text(checkCartStatus);
+    }
 
-            // Kollar om det ligger nått i kundvagnen
-function checkCartCount() {
-    console.log('hej');
-    let checkCartStatus = Object.keys(localStorage).length; // Hämtar objekt från local storage, om det finns nått där
-    let cartItems = $('#cart-items'); // hämtar bara platsen
-    checkCartStatus == null ? 0: checkCartStatus // Kollar hur många nycklar som finn i varukorgen sen tidigare, dvs hur många varor som finns i korgen. 
-    cartItems.text(checkCartStatus);
-}
+    return {
+        init: init
+    }
 
-return {
-    init: init
-}
+
+
+
+    $(function () {
+        if (localStorage.cart) {
+            // load cart data from local storage
+            cart = JSON.parse(localStorage.cart);
+            showCart(); // display cart that is loaded into cart array
+        }
+    });
+
+
 
 })(); //IIFE funktion för att den ska köras direkt. 
-
-// Click 
-$('#demo1').click(function () {
-    $(this).hide();
-});
