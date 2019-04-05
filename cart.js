@@ -32,6 +32,19 @@ För VG - nivå ska ni dessutom arbeta med följande
 12. Man ska kunna tömma varukorgen.
 13. Vid beställning visa bekräftelse på skärmen med alla detaljer om köpet inkl.bilder.
 */
+$(document).ready(function () {
+    cartRepository.init(); // document ready, första som körs. Se user status om personen har varit inne tidigare. Kolla i lokal storage. 
+})
+
+let cartRepository = (function () {
+            let init = function () {
+                checkCart();
+            }
+
+function checkCart() {
+    let checkCartStatus = ls.getItem;
+    checkCartStatus == null ? 
+}
 
 // Cashing variabler
 const cartBtn = document.querySelector('.selling-btn');
@@ -39,7 +52,6 @@ const emptyCartBtn = document.querySelector('.?');
 
 // Kundvagn array
 let cart = [];
-
 
 
 $(document).ready(function() {
