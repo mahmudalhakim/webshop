@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Molle:400i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 * {
   margin: 0;
@@ -20,6 +19,10 @@ h1 {
   text-transform: uppercase;
 }
 
+.italic {
+  font-style: italic;
+}
+
 figure {
   margin: 10px 0 0 0;
 }
@@ -28,6 +31,18 @@ figure .hero-img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.ml-4 {
+  margin-left: 4%;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.mt-4 {
+  margin-top: 4%;
 }
 
 .selling-btn {
@@ -111,7 +126,7 @@ figure .hero-img {
   margin-left: 15px;
 }
 
-.card-title  {
+.card-title {
   display: block;
   color: black;
 }
@@ -151,6 +166,46 @@ figure .hero-img {
 
 .teal {
   background-color: #2A363B;
+}
+
+.footer {
+  width: 100vw;
+  height: 400px;
+  background-color: #FECEA8;
+}
+
+address {
+  font-style: normal !important;
+}
+
+.product-img_container {
+  width: 100%;
+  height: 400px;
+}
+
+.product-img_container .product-img {
+  width: 75%;
+  float: right;
+  padding: 80px 10px;
+}
+
+.product-img_container .product-img_tiny {
+  width: 20%;
+  float: left;
+  margin: 30px 10px;
+}
+
+.product-small {
+  font-size: 1.3rem;
+}
+
+.product-smallest {
+  font-size: 0.9rem;
+}
+
+.product-sell_wrap {
+  margin: 10px 0;
+  padding: 5px 0;
 }
 
 @media (max-width: 900px) {

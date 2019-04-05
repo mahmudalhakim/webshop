@@ -38,16 +38,17 @@ $(document).ready(function () {
 
 let cartRepository = (function () {
     let init = function () {
-        checkCart();
-        ls.setItem("hej", "hej")
+        checkCartCount();
+    }
+    // Kollar om det ligger nått i kundvagnen
+    function checkCartCount() {
+        console.log('hej');
+        let checkCartStatus = Object.keys(localStorage).length; // Hämtar objekt från local storage, om det finns nått där
+        let cartItems = $('#cart-items'); // hämtar bara platsen
+        checkCartStatus == null ? 0 : checkCartStatus // Kollar hur många nycklar som finn i varukorgen sen tidigare, dvs hur många varor som finns i korgen. 
+        cartItems.text(checkCartStatus);
     }
 
-    function checkCart() {
-        checkCartStatus = Object.keys(localStorage).length;
-        checkCartStatus = null ? "0" : checkCartStatus;
-        $('#cart-items').text(checkCartStatus)
-        // cartItems.text(checkCartStatus);
-    }
 
     // Cashing variabler
     // const cartBtn = document.querySelector('.selling-btn');
@@ -67,4 +68,9 @@ let cartRepository = (function () {
         init: init,
     }
 
-})();
+})(); //IIFE funktion för att den ska köras direkt. 
+
+// Click 
+$('#demo1').click(function () {
+    $(this).hide();
+});

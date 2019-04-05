@@ -8,6 +8,8 @@ $(document).ready(function () {
 let mainRepository = (function () {
     let init = function () {
         // alert("tja")
+       
+
     }
     return {
         init: init,
