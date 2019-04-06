@@ -62,12 +62,7 @@ let cartRepository = (function () {
         cartItems.text(checkCartStatus);
     }
 
-    return {
-        init: init
-    }
-
-
-
+  
 
     $(function () {
         if (localStorage.cart) {
@@ -77,6 +72,8 @@ let cartRepository = (function () {
         }
     });
 
-
+    return {
+        init: init
+    }
 
 })(); //IIFE funktion för att den ska köras direkt. 
