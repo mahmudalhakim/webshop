@@ -7,6 +7,8 @@ $dusty-coral: #FECEA8;
 $coral: #FF847C;
 $pink: #E84A5F;
 $teal: #2A363B;
+
+// Grid template
 $bodyfont: 'Poppins',
 sans-serif;
 $decorativefont: 'Molle',
@@ -52,6 +54,7 @@ footer {
         font-weight: 700;
         color: $coral;
     }
+
     ul {
         li {
             a {
@@ -68,6 +71,10 @@ footer {
     text-transform: uppercase;
 }
 
+.italic {
+    font-style: italic;
+}
+
 figure {
     margin: 5% 0% 0% 0%;
 
@@ -75,6 +82,18 @@ figure {
         width: 100%;
         object-fit: cover;
     }
+}
+
+.ml-4 {
+    margin-left: 4%;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+.mt-4 {
+    margin-top: 4%;
 }
 
 .brand-logo {
@@ -232,6 +251,39 @@ address {
     font-style: normal !important;
 }
 
+//productpage
+.product-img_container {
+    width: 100%;
+    // min-height:300px;
+    // max-height:400px;
+    height: 400px;
+
+    .product-img {
+        width: 75%;
+        float: right;
+        padding: 80px 10px;
+    }
+
+    .product-img_tiny {
+        width: 20%;
+        float: left;
+        margin: 30px 10px;
+    }
+}
+
+.product-small {
+    font-size: 1.3rem;
+}
+
+.product-smallest {
+    font-size: 0.9rem;
+}
+
+.product-sell_wrap {
+    margin: 10px 0;
+    padding: 5px 0;
+
+}
 
 @media (max-width:900px) {
     .hero-img {

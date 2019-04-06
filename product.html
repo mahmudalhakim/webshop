@@ -53,9 +53,62 @@
     </header>
 
     <main>
-      
+        <div class="container">
+
+            <div class="row">
+                <div class="col s12 m6 offset-m6">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">textsms</i>
+                            <input type="text" id="autocomplete-input" class="autocomplete">
+                            <label for="autocomplete-input">Autocomplete</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="product-img_container">
+                        <img class="product-img dusty-green z-depth-2 hoverable" src="images/aviator.png" alt="">
+                        <div class="justify-center">
+                            <img class="product-img_tiny dusty-green z-depth-2 hoverable" src="images/aviator.png"
+                                alt="">
+                            <img class="product-img_tiny dusty-green z-depth-2 hoverable" src="images/aviator.png"
+                                alt="">
+                            <img class="product-img_tiny dusty-green z-depth-2 hoverable" src="images/aviator.png"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m5 offset-m1">
+                    <h2>Product</h2>
+                    <h5>1000kr <span class="thin ml-4 product-small">Inkl. VAT</span></h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus, quam.</p>
+                    <p class="mt-4"><strong>Color:</strong> Black</p>
+                    <div class="product-sell_wrap">
+                        <div class="col s12 m3">
+                            <select>
+                                <option value="" disabled selected>pcs</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                        <a href="" class="btn-large waves-effect waves-light ml-20"><i
+                                class="material-icons left">shopping_cart</i>Add to cart</a>
+                        
+                    </div>
+                    <p class="product-smallest">Lagerstatus: <span id="inStore"></span></p>
+                    <p class="product-smallest italic"><strong><i class="material-icons left">local_shipping</i> Standard</strong> delivery all over the world</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="demo" id="demo"></div>
     </main>
-    
+
     <footer>
         <div class="container">
             <div class="line-coral">
@@ -77,11 +130,13 @@
                     </address>
                 </div>
                 <div class="col l4 s12">
-                    <h5>Contact us!</h5>
-                    <ul class="center">
-                        <li><a href="mailto:fred@sunkissed.com">fred@sunkissed.com</a></li>
-                        <li><a href="mailto:perry@sunkissed.com">perry@sunkissed.com/a></li>
-                        <li><a href="phone:08123345">08 123 345</a></li>
+                    <h5 class="deep-orange-text text-lighten-2">Contact us!</h5>
+                    <ul>
+                        <li><a class="deep-orange-text text-darken-1"
+                                href="mailto:fred@sunkissed.com">fred@sunkissed.com</a></li>
+                        <li><a class="deep-orange-text text-darken-1"
+                                href="mailto:perry@sunkissed.com">perry@sunkissed.com/a></li>
+                        <li><a class="deep-orange-text text-darken-1" href="phone:08123345">08 123 345</a></li>
                     </ul>
                 </div>
                 <div class="col l4 s12">
@@ -102,13 +157,15 @@
             </div>
         </div>
     </footer>
-    
-
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
     </script>
     <script src="main.js"></script>
+    <script src="materializeRepo.js"></script>
+    <script src="localstorage.js"></script>
+    <script src="productList.js"></script>
+    <script src="cart.js"></script>
     <script src="js/materialize.js"></script>
 
 </body>

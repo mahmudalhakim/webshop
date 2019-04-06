@@ -5,8 +5,8 @@ let ls = (function () {
     }
 
     let getItem = function (key) {
-
         return localStorage.getItem(key);
+        
     }
     return {
         setItem: setItem,
