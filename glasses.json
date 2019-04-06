@@ -1,4 +1,6 @@
-[{
+{
+    "glasses":
+    [{
         "id": 1,
         "title": "Aviator",
         "price": 1000,
@@ -39,3 +41,4 @@
         "description": "Lorem Ipsum"
     }
 ]
+}

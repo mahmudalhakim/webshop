@@ -34,43 +34,49 @@ För VG - nivå ska ni dessutom arbeta med följande
 */
 $(document).ready(function () {
     cartRepository.init(); // document ready, första som körs. Se user status om personen har varit inne tidigare. Kolla i lokal storage. 
+
 })
 
 let cartRepository = (function () {
+
     let init = function () {
         checkCartCount();
     }
-    // Kollar om det ligger nått i kundvagnen
+
+// Vid klick, skicka objektet till lokalstorage
+    // Click 
+        $('.selling-btn').on('click', function () {
+            alert('The button was clicked, and soon the item will appear on your shopping cart')
+            let inputValue = '10';
+            //addera item (object) i shopping cart
+            ls.setItem('items', inputValue);
+            console.log(ls.getItem('items'));
+        });
+    
+    // Kollar om det ligger nått i kundvagnen redan
     function checkCartCount() {
         console.log('hej');
-        let checkCartStatus = Object.keys(localStorage).length; // Hämtar objekt från local storage, om det finns nått där
-        let cartItems = $('#cart-items'); // hämtar bara platsen
-        checkCartStatus == null ? 0 : checkCartStatus // Kollar hur många nycklar som finn i varukorgen sen tidigare, dvs hur många varor som finns i korgen. 
+        let checkCartStatus = Object.keys(localStorage).length; // Hämtar antal objekt från local storage, om det finns nått där
+        let cartItems = $('.cart-items'); // Hämtar bara platsen, för att kunna uppdatera den sedan med värde
+        checkCartStatus == null ? 0 : checkCartStatus // Kollar hur många nycklar som finn i varukorgen sen tidigare, dvs hur många varor som finns i korgen. Om det inte finns några varor i LocalStorage så sätter den 0, annars sätter den värdet som hämtar från localstorage.
         cartItems.text(checkCartStatus);
     }
 
-
-    // Cashing variabler
-    // const cartBtn = document.querySelector('.selling-btn');
-    // const emptyCartBtn = document.querySelector('.?');
-
-    // Kundvagn array
-    let cart = [];
-
-
-    // $(document).ready(function () {
-    //     // När man klickar på knappen ska varan läggas i korgen
-    //     $('selling-btn').click(function () {
-    //         $('.demo1').show(300);
-    //     });
-
     return {
-        init: init,
+        init: init
     }
 
-})(); //IIFE funktion för att den ska köras direkt. 
 
-// Click 
-$('#demo1').click(function () {
-    $(this).hide();
-});
+
+
+    $(function () {
+        if (localStorage.cart) {
+            // load cart data from local storage
+            cart = JSON.parse(localStorage.cart);
+            showCart(); // display cart that is loaded into cart array
+        }
+    });
+
+
+
+})(); //IIFE funktion för att den ska köras direkt. 
