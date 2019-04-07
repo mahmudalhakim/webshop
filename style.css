@@ -189,7 +189,8 @@ figure .hero-img {
 }
 
 .dusty-coral {
-  background-color: #FECEA8;
+  background: -webkit-gradient(linear, left bottom, left top, from(#fecea8), to(#ffe9d3));
+  background: linear-gradient(to top, #fecea8 0%, #ffe9d3 100%);
 }
 
 .coral {

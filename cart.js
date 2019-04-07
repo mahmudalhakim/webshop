@@ -43,16 +43,16 @@ let cartRepository = (function () {
         checkCartCount();
     }
 
-// Vid klick, skicka objektet till lokalstorage
+    // Vid klick, skicka objektet till lokalstorage
     // Click 
-        $('.selling-btn').on('click', function () {
-            alert('The button was clicked, and soon the item will appear on your shopping cart')
-            let inputValue = '10';
-            //addera item (object) i shopping cart
-            ls.setItem('items', inputValue);
-            console.log(ls.getItem('items'));
-        });
-    
+    $('.selling-btn').on('click', function () {
+        alert('The button was clicked, and soon the item will appear on your shopping cart')
+        let inputValue = '10';
+        //addera item (object) i shopping cart
+        ls.setItem('items', inputValue);
+        console.log(ls.getItem('items'));
+    });
+
     // Kollar om det ligger nått i kundvagnen redan
     function checkCartCount() {
         console.log('hej');
@@ -62,15 +62,13 @@ let cartRepository = (function () {
         cartItems.text(checkCartStatus);
     }
 
-  
-
-    $(function () {
+    (function () {
         if (localStorage.cart) {
             // load cart data from local storage
             cart = JSON.parse(localStorage.cart);
             showCart(); // display cart that is loaded into cart array
         }
-    });
+    })();
 
     return {
         init: init

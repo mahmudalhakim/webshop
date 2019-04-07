@@ -1,44 +1,43 @@
 {
-    "glasses":
-    [{
-        "id": 1,
-        "title": "Aviator",
-        "price": 1000,
-        "inStock": 7,
-        "img": "images/aviator.png", 
-        "description": "Lorem Ipsum"
-    },
-    {
-        "id": 2,
-        "title": "Wayfarer",
-        "price": 1500,
-        "inStock": 12,
-        "img": "images/wayfarer3.png", 
-        "description": "Lorem Ipsum"
-    },
-    {
-        "id": 3,
-        "title": "Club",
-        "price": 1200,
-        "inStock": 3,
-        "img": "images/", 
-        "description": "Lorem Ipsum"
-    },
-    {
-        "id": 4,
-        "title": "Rayban",
-        "price": 1400,
-        "inStock": 5,
-        "img": "", 
-        "description": "Lorem Ipsum"
-    },
-    {
-        "id": 5,
-        "title": "Rayban",
-        "price": 1500,
-        "inStock": 10,
-        "img": "", 
-        "description": "Lorem Ipsum"
-    }
-]
+    "glasses": [{
+            "id": 1,
+            "title": "Aviator",
+            "price": 1000,
+            "inStock": 7,
+            "img": "images/aviator.png",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita accusamus molestias! Pariatur fuga, repellendus quas facere veritatis ducimus vero eum in! Quos, sequi! Molestias vero perferendis ipsum quae odit!"
+        },
+        {
+            "id": 2,
+            "title": "Wayfarer",
+            "price": 1500,
+            "inStock": 12,
+            "img": "images/wayfarer3.png",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas porro id vero obcaecati? Sapiente necessitatibus a quas dolorem modi perferendis!"
+        },
+        {
+            "id": 3,
+            "title": "Club",
+            "price": 1200,
+            "inStock": 3,
+            "img": "images/wayfarer3.png",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita accusamus molestias! Pariatur fuga, repellendus quas facere veritatis ducimus vero eum in! Quos, sequi! Molestias vero perferendis ipsum quae odit!"
+        },
+        {
+            "id": 4,
+            "title": "Rayban",
+            "price": 1400,
+            "inStock": 5,
+            "img": "images/wayfarer3.png",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas porro id vero obcaecati? Sapiente necessitatibus a quas dolorem modi perferendis!"
+        },
+        {
+            "id": 5,
+            "title": "Rayban",
+            "price": 1500,
+            "inStock": 10,
+            "img": "images/wayfarer3.png",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita accusamus molestias! Pariatur fuga, repellendus quas facere veritatis ducimus vero eum in! Quos, sequi! Molestias vero perferendis ipsum quae odit!"
+        }
+    ]
 }
