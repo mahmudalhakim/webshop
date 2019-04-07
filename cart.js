@@ -38,7 +38,6 @@ $(document).ready(function () {
 })
 
 let cartRepository = (function () {
-
     let init = function () {
         checkCartCount();
     }
@@ -46,11 +45,14 @@ let cartRepository = (function () {
 // Vid klick, skicka objektet till lokalstorage
     // Click 
         $('.selling-btn').on('click', function () {
-            alert('The button was clicked, and soon the item will appear on your shopping cart')
-            let inputValue = '10';
-            //addera item (object) i shopping cart
-            ls.setItem('items', inputValue);
-            console.log(ls.getItem('items'));
+            $.getJSON("glasses.json", function (response) {
+                console.log(response.name);
+                $("#showOrder").html(response.title + '<br>' +
+                    response.name);
+            });
+            cartItems = ls.setItem('aviator', 'objekt för aviator');
+            console.log(cartItems + 'hejsan');
+            alert('The button was clicked');
         });
     
     // Kollar om det ligger nått i kundvagnen redan

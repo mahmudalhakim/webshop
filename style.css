@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Molle:400i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
-
 * {
   margin: 0;
 }
@@ -58,7 +57,7 @@ figure {
 figure .hero-img {
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .ml-4 {
@@ -102,8 +101,8 @@ figure .hero-img {
   display: inline-block;
 }
 
-.line>span:before,
-.line>span:after {
+.line > span:before,
+.line > span:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -117,7 +116,7 @@ figure .hero-img {
   margin-right: 15px;
 }
 
-.line>span:after {
+.line > span:after {
   left: 100%;
   margin-left: 15px;
 }
@@ -136,13 +135,13 @@ figure .hero-img {
   color: #FF847C;
 }
 
-.line-coral>span {
+.line-coral > span {
   position: relative;
   display: inline-block;
 }
 
-.line-coral>span:before,
-.line-coral>span:after {
+.line-coral > span:before,
+.line-coral > span:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -151,12 +150,12 @@ figure .hero-img {
   background: #FECEA8;
 }
 
-.line-coral>span:before {
+.line-coral > span:before {
   right: 100%;
   margin-right: 15px;
 }
 
-.line-coral>span:after {
+.line-coral > span:after {
   left: 100%;
   margin-left: 15px;
 }
@@ -256,10 +255,8 @@ address {
   .h2 {
     font-size: 1.1rem !important;
   }
-
   .hero-img {
     height: 300px !important;
   }
 }
-
 /*# sourceMappingURL=style.css.map */
