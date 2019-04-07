@@ -4,40 +4,80 @@
             "title": "Aviator",
             "price": 1000,
             "inStock": 7,
-            "img": "images/aviator.png",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita accusamus molestias! Pariatur fuga, repellendus quas facere veritatis ducimus vero eum in! Quos, sequi! Molestias vero perferendis ipsum quae odit!"
+            "img": "images/sunglasses-aviator.png",
+            "description": "Lorem Ipsum"
         },
         {
             "id": 2,
-            "title": "Wayfarer",
+            "title": "Club",
             "price": 1500,
             "inStock": 12,
-            "img": "images/wayfarer3.png",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas porro id vero obcaecati? Sapiente necessitatibus a quas dolorem modi perferendis!"
+            "img": "images/sunglasses-club-tortoise.png",
+            "description": "Lorem Ipsum"
         },
         {
             "id": 3,
-            "title": "Club",
+            "title": "Lightblue",
             "price": 1200,
             "inStock": 3,
-            "img": "images/wayfarer3.png",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita accusamus molestias! Pariatur fuga, repellendus quas facere veritatis ducimus vero eum in! Quos, sequi! Molestias vero perferendis ipsum quae odit!"
+            "img": "images/sunglasses-lightblue.png",
+            "description": "Lorem Ipsum"
         },
         {
             "id": 4,
             "title": "Rayban",
             "price": 1400,
             "inStock": 5,
-            "img": "images/wayfarer3.png",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas porro id vero obcaecati? Sapiente necessitatibus a quas dolorem modi perferendis!"
+            "img": "images/sunglasses-limegreen.png",
+            "description": "Lorem Ipsum"
         },
         {
             "id": 5,
+            "title": "Cool Men",
+            "price": 1450,
+            "inStock": 8,
+            "img": "images/sunglasses-men.png",
+            "description": "Lorem Ipsum"
+        },
+        {
+            "id": 6,
             "title": "Rayban",
-            "price": 1500,
-            "inStock": 10,
-            "img": "images/wayfarer3.png",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita accusamus molestias! Pariatur fuga, repellendus quas facere veritatis ducimus vero eum in! Quos, sequi! Molestias vero perferendis ipsum quae odit!"
+            "price": 1600,
+            "inStock": 2,
+            "img": "images/sunglasses-rayban-blue.png",
+            "description": "Lorem Ipsum"
+        },
+        {
+            "id": 7,
+            "title": "Rayban Classic",
+            "price": 1600,
+            "inStock": 2,
+            "img": "images/sunglasses-rayban-classic.png",
+            "description": "Lorem Ipsum"
+        },
+        {
+            "id": 8,
+            "title": "Rayban Orange",
+            "price": 1200,
+            "inStock": 4,
+            "img": "images/sunglasses-rayban-orange.png",
+            "description": "Lorem Ipsum"
+        },
+        {
+            "id": 9,
+            "title": "Rayban Tortoise",
+            "price": 1550,
+            "inStock": 3,
+            "img": "images/sunglasses-rayban-tortoise.png",
+            "description": "Lorem Ipsum"
+        },
+        {
+            "id": 10,
+            "title": "Wayfarer Blue/Black",
+            "price": 1650,
+            "inStock": 7,
+            "img": "images/sunglasses-wayfarer-blueblack.png",
+            "description": "Lorem Ipsum"
         }
     ]
 }

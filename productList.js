@@ -13,7 +13,6 @@ let productList = (function () {
             let glasses = data.glasses;
             console.log(glasses)
 
-            let product = "";
             $.each(glasses, function (key, product) {
                 let productList = $("#product-list");
 
@@ -50,23 +49,3 @@ let productList = (function () {
         init: init
     }
 })();
-
-
-/* <div class="col s12 m4 z-depth-2 ">
-<div class="card">
-    <div class="card-image_wrap">
-        <!-- Genereras med JS -->
-    </div>
-    <a class="btn-floating hoverable halfway-fab waves-effect waves-light red"><i
-            class="material-icons">favorite_border</i></a>
-</div>
-<div class="card-container">
-    <div class="card-content">
-        <span class="card-title" id="card-title"></span>
-        <p class="card-description"></p>
-    </div>
-    <div class="card-action">
-        <!-- Genereras med JS -->
-    </div>
-</div>
-</div> */

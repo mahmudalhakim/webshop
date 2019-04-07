@@ -17,7 +17,7 @@
         <nav class="nav-extended light">
             <div class="container">
                 <div class="nav-wrapper">
-                    <a href="index.html" class="brand-logo h2 center uppercase ">Sunkissed and fabulous</a>
+                    <a href="index.html" class="brand-logo h2 center uppercase ">Sunkissed and <br> fabulous</a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i
@@ -57,20 +57,29 @@
     </header>
 
     <main>
-          
-
-    </main>
-    <footer>
         <div class="container">
+            <div id="orderComplete" class="center">
+                <h4>Thank you for your purchase!</h4>
+                <p>Please find order details below.</p>
+                <div id="showOrder">Här ska ordern synas. Hämta från localstorage 😃 med htmlkod inluderat.</div>
+                <table>
+                    <th>Your order</th>
+                    <tr>
+                        <td>Show order in table?</td>
+                    </tr>
+                </table>
+            </div>
+    </main>
+
+    <footer>
             <div class="line-coral">
                 <span>
                     <h4>Do you like our style?</h>
                 </span>
             </div>
         </div>
-    
     </footer>
-    
+
     <footer class="page-footer dusty-coral">
         <div class="container">
             <div class="row">
@@ -84,7 +93,7 @@
                     <h5>Contact us!</h5>
                     <ul class="center">
                         <li><a href="mailto:fred@sunkissed.com">fred@sunkissed.com</a></li>
-                        <li><a href="mailto:perry@sunkissed.com">perry@sunkissed.com/a></li>
+                        <li><a href="mailto:perry@sunkissed.com">perry@sunkissed.com</a></li>
                         <li><a href="phone:08123345">08 123 345</a></li>
                     </ul>
                 </div>
@@ -106,7 +115,7 @@
             </div>
         </div>
     </footer>
-    
+
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
@@ -116,6 +125,7 @@
     <script src="localstorage.js"></script>
     <script src="cart.js"></script>
     <script src="js/materialize.js"></script>
+    <!-- <script src="showorder.js"></script> -->
 </body>
 
 </html>
