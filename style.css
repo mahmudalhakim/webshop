@@ -223,13 +223,14 @@ address {
 .product-img_container .product-img {
   width: 75%;
   float: right;
-  padding: 80px 10px;
+  padding: 100px 50px;
 }
 
 .product-img_container .product-img_tiny {
   width: 20%;
   float: left;
-  margin: 30px 10px;
+  margin: 0% 1% 5% 0%;
+  padding: 20px 10px;
 }
 
 .product-small {
