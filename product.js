@@ -13,10 +13,8 @@ let productRepository = (function () {
             productContainer.append(productModel)
         })
     }
-    
+
     function getProductContent(product) {
-        console.log(product);
-        
         return `
         <div class="col s12 m6">
                           <div class="product-img_container">
@@ -42,7 +40,7 @@ let productRepository = (function () {
                                       ${getStockValue(product.inStock)} 
                                   </select>
                               </div>
-                              <a href="" id="addToBasket" class="btn-large waves-effect waves-light ml-20"><i
+                              <a href="" id="addToBasket" data-id="${product.id}" class="btn-large waves-effect waves-light ml-20"><i
                                       class="material-icons left">shopping_cart</i>Add to cart</a>
   
                           </div>
@@ -53,15 +51,15 @@ let productRepository = (function () {
 
     function getStockValue(inStock) {
         let selections;
-        
+
         for (let i = 1; i <= inStock; i++) {
             selections += `<option value="${[i]}">${[i]}</option>`;
         }
-        
+
         return selections;
     }
 
-    let getUrlParameter = function(sParam) {
+    let getUrlParameter = function (sParam) {
         var sPageURL = window.location.search.substring(1),
             sURLVariables = sPageURL.split('?'),
             sParameterName,
@@ -76,7 +74,7 @@ let productRepository = (function () {
         }
     };
 
-    let getProduct = function(currentId) { //Publik
+    let getProduct = function (currentId) { //Publik
         return $.getJSON('glasses.json').then(function (data) {
             return data.glasses.filter(function (product) {
                 return product.id == currentId;

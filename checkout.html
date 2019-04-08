@@ -64,24 +64,10 @@
             </div>
             <button class="btn-small white black-text right remove-cart" id="remove-cart">Remove cart</button>
 
-            <div id="displayCart">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Glasses</th>
-                            <th>Image</th>
-                            <th>Quantity</th>
-                            <th>Item Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr id="render-cart">
-
-                        </tr>
-                    </tbody>
-                </table>
-                <h4>Price: <span id="price"></span></h4>
+            <div id="display-cart">
+                
             </div>
+            <h4>Price: <span id="price"></span></h4>
 
 
             <!-- LINE -->
@@ -125,7 +111,8 @@
                     </div>
 
                     <div class="col m6 offset-m3">
-                        <button type="button" class="btn cart-btn waves-effect waves-light" id="continue_payment">Continue to
+                        <button type="button" class="btn cart-btn waves-effect waves-light"
+                            id="continue_payment">Continue to
                             payment</button>
                     </div>
 
@@ -193,7 +180,8 @@
 
                             <div class="col m6 offset-m2">
 
-                                <button type="submit" value="Lets ship!" class="btn cart-btn waves-effect waves-light">Lets ship!</button>
+                                <button type="submit" value="Lets ship!"
+                                    class="btn cart-btn waves-effect waves-light">Lets ship!</button>
                                 <!-- <a class="btn cart-btn waves-effect waves-light">Lets ship!</a> -->
                             </div>
                 </form>
@@ -257,44 +245,18 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
     </script>
-    <script>
-        // $(document).ready(function() {
-
-        //     // Samla all info om kunden i ett objekt. Använda . notation för att komma åt innehållet. 
-        //     let $userData = [];
-        //     let $fname = $('first-name').val();
-        //     let $lname = $('las')
-
-        //     let $email = $('input').val();
-
-        //     console.log($email);
-        //     function validateEmail($email) {
-        //         let emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-        //         $("#validateEmail").mouseout(function () {
-        //             $(".showMsg").append("Handler for .mouseleave() called.");
-        //             console.log(emailReg.test($email));
-        //             return emailReg.test($email);
-        //         });
-
-        //     };
-        // });
-
-        // Kolla tomma fält. Använder trim för att ta bort alla tomma fält före och efter
-        /* if ($.trim(sEmail).length == 0 || $("#fname").val() == "" || $("#lname").val() == "") {
-            alert('All fields are mandatory');
-            e.preventDefault();
-        }; */
-    </script>
-
-
-
-
     <script src="main.js"></script>
     <script src="materializeRepo.js"></script>
     <script src="localstorage.js"></script>
     <script src="productList.js"></script>
+<<<<<<< HEAD
     <script src="cart.js"></script>
     <script src="checkout.js"></script>
+=======
+    <script src="product.js"></script>
+    <script src="checkout.js"></script>
+        <script src="cart.js"></script>
+>>>>>>> 046fde08ec895095dce1f1791a3e5b39314144fd
     <script src="js/materialize.js"></script>
 
 </body>

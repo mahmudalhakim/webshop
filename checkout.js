@@ -4,55 +4,89 @@ $(document).ready(function () {
 
 let checkoutRepo = (function () {
     let init = function () {
-        renderCart();
-        cartQuant();
+        currentBasket();
+        getCartContent();
         calcPrice();
         $(".remove-cart").on("click", removeCart)
+        $(document).on('click', "#plus", function (e) {
+            e.preventDefault();
+
+            let newProductQuantity = +$("#cart-quantity").text();
+            let productId = $(this).data('id'); //tydligt vilket ID (produkt) som ska modifieras
+            modifyProduct(productId, ++newProductQuantity);
+
+        })
+        $(document).on('click', "#minus", function (e) {
+            e.preventDefault();
+
+            let newProductQuantity = +$("#cart-quantity").text();
+            let productId = $(this).data('id');
+
+            modifyProduct(productId, --newProductQuantity);
+
+        })
     }
-    let quant = 1;
+
+    function modifyProduct(productId, newProductQuantity) {
+        let productModel = cartRepository.populateProductModel(productId, newProductQuantity);
+
+        if (newProductQuantity == 0) return;
+
+        ls.removeItem(productId)
+        ls.setItem(productId, productModel);
+        $("#cart-quantity").text(newProductQuantity)
+
+    }
+
     let price;
 
-    let cartQuant = function () {
-        quant = 5;
-        $("#cart-quantity").text(quant);
-        $("#add-quant").on("click", function () {
-            ++quant;
-            $("#cart-quantity").text(quant);
-        })
-        $("#remove-quant").on("click", function () {
-            --quant;
-            $("#cart-quantity").text(quant);
-        })
+    let currentBasket = function () {
+        let result = `<table>
+            <thead>
+            <tr>
+                <th>Glasses</th>
+                <th>Image</th>
+                <th>Quantity</th>
+                <th>Item Price</th>
+            </tr>
+                    </thead >
+        <tbody>
+            ${getCartContent()}
+    </tbody>
+    </table>`;
+        $("#display-cart").html(result)
+    };
+
+    function getCartContent() {
+        let productContent = '';
+        for (let i = 0; i < localStorage.length; i++) {
+
+            let product = ls.getItem(localStorage.key(i));
+            productContent += `<tr id="render-cart">            
+                                    <td>${product.title}</td>
+                                        <td><img src="${product.img}" alt="Image"> </td>
+                                        <td>
+                                            <button data-id="${product.id}" id="plus" class="btn-flat transparent">+</button>
+                                            <span id="cart-quantity">${product.quantity}</span>
+                                            <button data-id="${product.id}" id="minus" class="btn-flat transparent">-</button>
+                                        </td>
+                                        <td>${product.price}</td> 
+                                        </tr>
+                                        `
+        }
+        return productContent
     }
-
-    function renderCart() {
-        let title = "title"
-        let imgSrc = ""
-
-        price = 1493;
-        $("#render-cart").append(`
-                                    <td>${title}</td>
-                                    <td><img src="${imgSrc}" alt="Image"> </td>
-                                    <td>
-                                        <button id="add-quant" class="btn-flat transparent">+</button>
-                                        <span id="cart-quantity">${quant}</span>
-                                        <button id="remove-quant" class="btn-flat transparent">-</button>
-                                    </td>
-                                    <td>${price}</td> `)
-
-    }
-
 
     let calcPrice = function () {
         if (price == undefined) {
             price = 0;
         } else {
-            price * quant;
+            price;
         }
         $("#price").text(price)
     }
-    
-    
+
+
     //TODO: flytta till Cart.js
     function removeCart() {
         ls.clear();
@@ -62,7 +96,9 @@ let checkoutRepo = (function () {
     }
 
     return {
-        init: init, 
-        calcPrice: calcPrice
+        init: init,
+        calcPrice: calcPrice,
+        currentBasket: currentBasket
     }
+
 })();

@@ -11,7 +11,6 @@ let productList = (function () {
     function renderProducts() {
         $.getJSON('glasses.json', function (data) {
             let glasses = data.glasses;
-            console.log(glasses)
 
             $.each(glasses, function (key, product) {
                 let productList = $("#product-list");
@@ -43,7 +42,7 @@ let productList = (function () {
             })
         });
     }
-    
+
     return {
         init: init
     }

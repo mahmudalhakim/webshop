@@ -23,14 +23,14 @@ let mainRepository = (function () {
         <p class="cart-price">Price: </p>
 </a></li>`
 
-        let calculatedPrice = checkoutRepo.calcPrice();
-        let liPrice = `<li><a href=""><p class="cart-price">Price: <span id="price"></span>kr</p></a></li> <li class="dusty-coral"><a href="checkout.html">To checkout</a></li>`;
+        /* let calculatedPrice = checkoutRepo.calcPrice();
+        let liPrice = `<li><a href=""><p class="cart-price">Price: <span id="price"></span>kr</p></a></li> <li class="dusty-coral"><a href="checkout.html">To checkout</a></li>`; */
         let array = new Array(3)
         for (let i = 0; i < array.length; i++) {
             $("#dropdown1").prepend(li)
         }
 
-        $("#dropdown1").append(liPrice)
+        /* $("#dropdown1").append(liPrice) */
     }
 
     $("button[type=submit]").click(function (e) {

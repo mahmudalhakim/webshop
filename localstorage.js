@@ -1,10 +1,10 @@
 let ls = (function () {
     let setItem = function (key, value) {
-        localStorage.setItem(key, value)
+        localStorage.setItem(key, JSON.stringify(value))
     }
 
     let getItem = function (key) {
-        return localStorage.getItem(key);   
+        return JSON.parse(localStorage.getItem(key));
     }
 
     let removeItem = function (key) {
