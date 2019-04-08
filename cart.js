@@ -5,80 +5,60 @@ $(document).ready(function () {
 let cartRepository = (function () { // Vad och när saker ska hända
     let init = function () {
         checkCartCount();
-        /* itemsInBasket(); */
-        $('#addToBasket').on('click', addToBasket());
+        $(document).on('click', '#addToBasket', function (e) {
+
+            e.preventDefault();
+
+            let productId = $(this).data("id");
+            let quantity = $(".select-quantity").val();
+
+            //Create a new productmodel that sets the quantiy of glasses in it.
+            let productModel = populateProductModel(productId, quantity)
+
+            let id = productModel.id;
+            console.log(productModel);
+            ls.setItem(id, productModel)
+
+
+        });
     }
 
-    // Vid klick, skicka objektet till lokalstorage
-    function addToBasket() {
-        let cartItem = productRepository.getUrlParameter('id'); // Sätter cartItem till id-värdet
-        $.getJSON("glasses.json", function (response) {
-            let quant = '';
-            let glasses = response.glasses[cartItem - 1]; //Hämtar objektet
-            let quantAndId = [quant, cartItem];
-            console.log(quantAndId[0]);
-            console.log(Array.isArray(quantAndId)); // Retunerar TRUE
-            ls.setItem(glasses.id, quantAndId); // Sätter id (key) (namnet på glasses och antal)
-        })
-    };
-    
-    let currentBasket = function() {
-        let result = [];
-        for (var i = 0; i < localStorage.length; i++) { // Loopar över LS och jämför id
-            let currentId = (localStorage.key([i]));
-            let output = productRepository.getProduct(currentId); // Kollar vilka som stämmer överens med JSON (vad retuneras???)
-           
-            output.then(function (input) {
-            console.log(input[0]); // Retunerar objektet
-               result.push(input[0]);
-            })
+    let populateProductModel = function (productId, quantity) {
+        let product = findProductFromFile(productId);
+
+        let productModel = {
+            id: product.id,
+            title: product.title,
+            img: product.img,
+            price: product.price,
+            quantity: quantity
+
         }
-        return result;
+
+        return productModel;
     }
-    console.log(currentBasket());
+    function findProductFromFile(productId) {
 
-function displayBasket () {
+        let product;
 
-}
+        $.ajax({
+            url: 'glasses.json',
+            dataType: 'json', //json data type
+            success: function (result) {
+                product = result.glasses[productId - 1]; //Hämtar objektet
 
-/* 
-for (var i = 0; i < localStorage.length; i++) {
-            let result = `Value : ${localStorage.getItem(localStorage.key(i))}`;
-            document.getElementById('result').innerHTML += `<li>${result}</li>`
-            console.log("Väder: " + localStorage.getItem(localStorage.key(i)));
-        }
+            },
+            error: function () { alert('feeel') },
+            async: false,
+        });
 
-        for (var i = 0; i < localStorage.length; i++) {
-            let resultKey = `Key : ${localStorage.key(i)}`;
-            let resultValue = `Value : ${localStorage.getItem(localStorage.key(i))}`;
-            document.getElementById('infoTable').innerHTML += `
-            <table>
-            <tr>
-                    <td>${resultKey}</td>
+        return product;
 
-                <td>${resultValue}</td>
-            </tr>
-            </table>`
-        }
+    }
 
-int res = 0;
-for (int i = 0 ; i != 3 ; i++) {
-   res = calculateResult(i, res);
-}
-return res;
+    function success(result) {
+    }
 
-
-
-getProduct(currentId).then(function (returndata) {
-        let productModel = getProductContent(returndata[0]);
-        productContainer.append(productModel) */
-
-
-
-
-   
-    
-    
     // Kollar om det ligger nått i kundvagnen redan
     function checkCartCount() {
         let checkCartStatus = Object.keys(localStorage).length; // Hämtar antal objekt från local storage, om det finns nått där
@@ -89,7 +69,7 @@ getProduct(currentId).then(function (returndata) {
 
     return {
         init: init,
-        currentBasket: currentBasket
+        populateProductModel: populateProductModel
     }
 
 })(); //IIFE funktion för att den ska köras direkt. 
