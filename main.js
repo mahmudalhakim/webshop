@@ -1,15 +1,18 @@
 $(document).ready(function () {
     mainRepository.init();
-    $(".dropdown-trigger").dropdown();
-    $(document).ready(function(){
-        $('.sidenav').sidenav();
-      });
+  
 })
 let mainRepository = (function () {
     let init = function () {
-        // alert("tja")
-       
-
+        $("#payment-method").hide();
+        $("#continue_payment").on('click', paymentMethod);
+        
+    }
+    
+    
+    function paymentMethod () {
+        $("#payment-method").show();
+        
     }
     return {
         init: init,

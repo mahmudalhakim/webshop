@@ -194,7 +194,7 @@ figure {
 
 
 
-select {
+.select-quantity {
     display:block !important;
 }
 .card-title {
@@ -208,6 +208,7 @@ select {
     position: relative;
     padding: 0 30px;
 }
+
 
 .card-image {
     background: linear-gradient(to top, #99b898 0%, #c9ddc9 100%);
@@ -252,6 +253,18 @@ address {
     color: $pink;
     font-style: normal !important;
 }
+
+//Cart 
+.cart-btn {
+    width:100%;
+
+}
+.label-expiry {
+    position: absolute;
+    top:-10px;
+}
+
+
 
 //productpage
 .product-img_container {

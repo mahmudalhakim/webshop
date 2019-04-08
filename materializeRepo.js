@@ -5,34 +5,16 @@ $(document).ready(function () {
 
 
 let materializeRepo = (function () {
-    let init = function () {
-        autoComplete();
+    let init = function () {        
+        $(".dropdown-trigger").dropdown();
+        $('.sidenav').sidenav();
+        
         select();
     }
 
-    function autoComplete() {
-
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.autocomplete');
-            var instances = M.Autocomplete.init(elems, options);
-        });
-
-
-        // Or with jQuery
-
-        $(document).ready(function () {
-            $('input.autocomplete').autocomplete({
-                data: {
-                    "Apple": null,
-                    "Microsoft": null,
-                    "Google": 'https://placehold.it/250x250'
-                },
-            });
-        });
-    }
 
     function select() {
-            // Or with jQuery
+        // Or with jQuery
 
         $(document).ready(function () {
             $('select').formSelect();

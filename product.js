@@ -39,9 +39,8 @@ let productRepository = (function () {
                           <p>${product.description}</p>
                           <p class="mt-4"><strong>Color:</strong> Black</p>
                           <div class="product-sell_wrap">
-                              <div class="col s12 m3">
-                                  <select>
-                                      <option value="" disabled selected>pcs</option>
+                              <div class="input-field col s12 m3">
+                                  <select class="select-quantity">
                                       ${getStockValue(product.inStock)} 
                                   </select>
                               </div>

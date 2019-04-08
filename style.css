@@ -160,7 +160,7 @@ figure .hero-img {
   margin-left: 15px;
 }
 
-select {
+.select-quantity {
   display: block !important;
 }
 
@@ -217,6 +217,15 @@ select {
 address {
   color: #E84A5F;
   font-style: normal !important;
+}
+
+.cart-btn {
+  width: 100%;
+}
+
+.label-expiry {
+  position: absolute;
+  top: -10px;
 }
 
 .product-img_container {

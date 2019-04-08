@@ -4,8 +4,7 @@ let ls = (function () {
     }
 
     let getItem = function (key) {
-        return localStorage.getItem(key);
-        
+        return localStorage.getItem(key);   
     }
 
     let removeItem = function (key) {
