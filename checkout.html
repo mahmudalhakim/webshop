@@ -17,7 +17,7 @@
         <nav class="nav-extended light">
             <div class="container">
                 <div class="nav-wrapper">
-                    <a href="#" class="brand-logo h2 center uppercase ">Sunkissed and fabulous</a>
+                    <a href="index.html" class="brand-logo h2 center uppercase ">Sunkissed and <br> fabulous</a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i
@@ -58,7 +58,11 @@
 
     <main>
         <div class="container">
-            <h5>Din kundvagn innehåller:</h5>
+            <div class="line-coral">
+                <span>
+                    <h4>Your cart</h>
+                </span>
+            </div>
 
             <div id="displayCart">
                 <table>
@@ -69,7 +73,7 @@
                             <th>Item Price</th>
                         </tr>
                     </thead>
-                
+
                     <tbody>
                         <tr>
                             <td>Image of Aviator</td>
@@ -89,51 +93,98 @@
                     </tbody>
                 </table>
             </div>
-
-
         </div>
 
-
-    </main>
-    <footer>
+        <!-- LINE -->
         <div class="container">
-
             <div class="line-coral">
                 <span>
-                    <h4>Do you like our style?</h>
+                    <h4>Please fill in your details</h>
                 </span>
             </div>
         </div>
-        <div class="footer"></div>
+        <!-- LINE -->
 
+        <!-- DETAILS START -->
+        <div class="container">
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12 m6 l6 ">
+                            <input id="first_name" type="text" class="validate">
+                            <label for="first_name">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12 m6 l6">
+                            <input type="text" class="validate">
+                            <label for="password">Phone number</label>
+                        </div>
+                        <div class="input-field col s12 m6 l6">
+                            <input id="email" type="email" id="validateEmail">
+                            <label for="email">Email</label>
+                            <div class="showMsg">Please enter a valid email address (jquery)</div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="input-field col s12 m6 l6">
+                            <input type="text" class="validate">
+                            <label for="password">Address</label>
+                        </div>
+                        <div class="input-field col s12 m6 l6">
+                            <input type="text" class="validate">
+                            <label>Zip code</label>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+        <!-- DETAILS END -->
+    </main>
+
+    <!-- LINE -->
+    <footer class="container">
+        <div class="line-coral">
+            <span>
+                <h4>Do you like our style?</h>
+            </span>
+        </div>
+        </div>
     </footer>
+    <!-- LINE -->
 
     <footer class="page-footer dusty-coral">
         <div class="container">
             <div class="row">
                 <div class="col l4 s12">
-                    <h5 class="deep-orange-text text-lighten-2">Visit us!</h5>
-                    <address>
-                        <p class="deep-orange-text text-darken-1">Drottninggatan 92-94, 111 36 Stockholm</p>
+                    <h5>Visit us!</h5>
+                    <address class="center">
+                        <p>Drottninggatan 92-94, 111 36 Stockholm</p>
                     </address>
                 </div>
                 <div class="col l4 s12">
-                    <h5 class="deep-orange-text text-lighten-2">Contact us!</h5>
-                    <ul>
-                        <li><a class="deep-orange-text text-darken-1"
-                                href="mailto:fred@sunkissed.com">fred@sunkissed.com</a></li>
-                        <li><a class="deep-orange-text text-darken-1"
-                                href="mailto:perry@sunkissed.com">perry@sunkissed.com</a></li>
-                        <li><a class="deep-orange-text text-darken-1" href="phone:08123345">08 123 345</a></li>
+                    <h5>Contact us!</h5>
+                    <ul class="center">
+                        <li><a href="mailto:fred@sunkissed.com">fred@sunkissed.com</a></li>
+                        <li><a href="mailto:perry@sunkissed.com">perry@sunkissed.com</a></li>
+                        <li><a href="phone:08123345">08 123 345</a></li>
                     </ul>
                 </div>
                 <div class="col l4 s12">
-                    <h5 class="deep-orange-text text-lighten-2">Links</h5>
-                    <ul>
-                        <li><a class="deep-orange-text text-darken-1" href="#!">Link 1</a></li>
-                        <li><a class="deep-orange-text text-darken-1" href="#!">Link 2</a></li>
-                        <li><a class="deep-orange-text text-darken-1" href="#!">Link 1</a></li>
-                        <li><a class="deep-orange-text text-darken-1" href="#!">Link 4</a></li>
+                    <h5>Follow us!</h5>
+                    <ul class="center">
+                        <li><a href="#!">Link 1</a></li>
+                        <li><a href="#!">Link 2</a></li>
+                        <li><a href="#!">Link 1</a></li>
+                        <li><a href="#!">Link 4</a></li>
                     </ul>
                 </div>
             </div>
@@ -146,12 +197,47 @@
         </div>
     </footer>
 
-
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
     </script>
+<script>
+    $(document).ready(function() {
+
+        // Samla all info om kunden i ett objekt. Använda . notation för att komma åt innehållet. 
+        let $userData = [];
+        let $fname = $('first-name').val();
+        let $lname = $('las')
+
+        let $email = $('input').val();
+
+        console.log($email);
+        function validateEmail($email) {
+            let emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+            $("#validateEmail").mouseout(function () {
+                $(".showMsg").append("Handler for .mouseleave() called.");
+                console.log(emailReg.test($email));
+                return emailReg.test($email);
+            });
+    
+        };
+    });
+
+
+        // Kolla tomma fält. Använder trim för att ta bort alla tomma fält före och efter
+        /* if ($.trim(sEmail).length == 0 || $("#fname").val() == "" || $("#lname").val() == "") {
+            alert('All fields are mandatory');
+            e.preventDefault();
+        }; */
+
+</script>
+
+
+
+    
     <script src="main.js"></script>
+    <script src="materializeRepo.js"></script>
+    <script src="localstorage.js"></script>
+    <script src="productList.js"></script>
+    <!-- <script src="cart.js"></script> -->
     <script src="js/materialize.js"></script>
 
 </body>

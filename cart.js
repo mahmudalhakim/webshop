@@ -42,19 +42,19 @@ let cartRepository = (function () {
         checkCartCount();
     }
 
-// Vid klick, skicka objektet till lokalstorage
+    // Vid klick, skicka objektet till lokalstorage
     // Click 
-        $('.selling-btn').on('click', function () {
-            $.getJSON("glasses.json", function (response) {
-                console.log(response.name);
-                $("#showOrder").html(response.title + '<br>' +
-                    response.name);
-            });
-            cartItems = ls.setItem('aviator', 'objekt för aviator');
-            console.log(cartItems + 'hejsan');
-            alert('The button was clicked');
+    $('.selling-btn').on('click', function () {
+        $.getJSON("glasses.json", function (response) {
+            console.log(response.name);
+            $("#showOrder").html(response.title + '<br>' +
+                response.name);
         });
-    
+        cartItems = ls.setItem('aviator', 'objekt för aviator');
+        console.log(cartItems + 'hejsan');
+        alert('The button was clicked');
+    });
+
     // Kollar om det ligger nått i kundvagnen redan
     function checkCartCount() {
         console.log('hej');
@@ -68,17 +68,7 @@ let cartRepository = (function () {
         init: init
     }
 
-
-
-
-    $(function () {
-        if (localStorage.cart) {
-            // load cart data from local storage
-            cart = JSON.parse(localStorage.cart);
-            showCart(); // display cart that is loaded into cart array
-        }
-    });
-
+      
 
 
 })(); //IIFE funktion för att den ska köras direkt. 
