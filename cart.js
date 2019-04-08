@@ -5,6 +5,7 @@ $(document).ready(function () {
 let cartRepository = (function () { // Vad och när saker ska hända
     let init = function () {
         checkCartCount();
+        /* itemsInBasket(); */
         $('#addToBasket').on('click', addToBasket());
     }
 
@@ -12,50 +13,72 @@ let cartRepository = (function () { // Vad och när saker ska hända
     function addToBasket() {
         let cartItem = productRepository.getUrlParameter('id'); // Sätter cartItem till id-värdet
         $.getJSON("glasses.json", function (response) {
-            let quant = 6;
+            let quant = '';
             let glasses = response.glasses[cartItem - 1]; //Hämtar objektet
             let quantAndId = [quant, cartItem];
-            console.log(Array.isArray(quantAndId));
-            ls.setItem(glasses.title, quantAndId); // Hämtar title (namnet på glasses och antal)
-            console.log(glasses.title + quantAndId);
+            console.log(quantAndId[0]);
+            console.log(Array.isArray(quantAndId)); // Retunerar TRUE
+            ls.setItem(glasses.id, quantAndId); // Sätter id (key) (namnet på glasses och antal)
         })
     };
-
-
-    let itemsInBasket = function () {
-
-    };
-
-
-    /* var array1 = ['a', 'b', 'c'];
-            console.log('START');
-            array1.forEach(function (element) {
-                console.log(element);
-            });
-            console.log('FINISH'); */
-
-    /*
-    $.getJSON(url, function(response){
-            console.log(response);
-            // dogs är en collection som innehåller key/value
-            // key är en hundras
-            // value är en array med sub-breeds
-            let dogs = response.message;
-            console.log(dogs);
-
-            $.each(dogs, function(dog) {
-                console.log(dog);
-                $('select').append(`<option value="${dog}">${dog}</option>`);
+    
+    let currentBasket = function() {
+        let result = [];
+        for (var i = 0; i < localStorage.length; i++) { // Loopar över LS och jämför id
+            let currentId = (localStorage.key([i]));
+            let output = productRepository.getProduct(currentId); // Kollar vilka som stämmer överens med JSON (vad retuneras???)
+           
+            output.then(function (input) {
+            console.log(input[0]); // Retunerar objektet
+               result.push(input[0]);
             })
-    
-    
-    
-    
-    let myJSON = JSON.stringify(myArray);
-    console.log(myJSON);
-    localStorage.setItem('myArray', myJSON);
-    console.table(localStorage); */
+        }
+        return result;
+    }
+    console.log(currentBasket());
 
+function displayBasket () {
+
+}
+
+/* 
+for (var i = 0; i < localStorage.length; i++) {
+            let result = `Value : ${localStorage.getItem(localStorage.key(i))}`;
+            document.getElementById('result').innerHTML += `<li>${result}</li>`
+            console.log("Väder: " + localStorage.getItem(localStorage.key(i)));
+        }
+
+        for (var i = 0; i < localStorage.length; i++) {
+            let resultKey = `Key : ${localStorage.key(i)}`;
+            let resultValue = `Value : ${localStorage.getItem(localStorage.key(i))}`;
+            document.getElementById('infoTable').innerHTML += `
+            <table>
+            <tr>
+                    <td>${resultKey}</td>
+
+                <td>${resultValue}</td>
+            </tr>
+            </table>`
+        }
+
+int res = 0;
+for (int i = 0 ; i != 3 ; i++) {
+   res = calculateResult(i, res);
+}
+return res;
+
+
+
+getProduct(currentId).then(function (returndata) {
+        let productModel = getProductContent(returndata[0]);
+        productContainer.append(productModel) */
+
+
+
+
+   
+    
+    
     // Kollar om det ligger nått i kundvagnen redan
     function checkCartCount() {
         let checkCartStatus = Object.keys(localStorage).length; // Hämtar antal objekt från local storage, om det finns nått där
@@ -65,7 +88,8 @@ let cartRepository = (function () { // Vad och när saker ska hända
     }
 
     return {
-        init: init
+        init: init,
+        currentBasket: currentBasket
     }
 
 })(); //IIFE funktion för att den ska köras direkt. 

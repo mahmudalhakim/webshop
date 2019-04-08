@@ -9,9 +9,10 @@ let productRepository = (function () {
         let currentId = getUrlParameter('id');
 
         getProduct(currentId).then(function (returndata) {
+            /* console.log(returndata[0]); // Retunerar objektet
+            console.log(returndata); // Retunerar array med objektet */
             let productModel = getProductContent(returndata[0]);
-            productContainer.append(productModel)
-
+            productContainer.append(productModel);
         })
     }
 
@@ -79,7 +80,7 @@ let productRepository = (function () {
         }
     };
 
-    function getProduct(currentId) {
+    let getProduct = function(currentId) { //Publik
         return $.getJSON('glasses.json').then(function (data) {
             return data.glasses.filter(function (product) {
                 return product.id == currentId;
@@ -89,6 +90,7 @@ let productRepository = (function () {
 
     return {
         init: init,
-        getUrlParameter: getUrlParameter
+        getUrlParameter: getUrlParameter,
+        getProduct: getProduct
     }
 })();
