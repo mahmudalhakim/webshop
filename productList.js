@@ -40,13 +40,10 @@ let productList = (function () {
                 </div> `
 
                 productList.append(productElement)
-
             })
         });
     }
-
     
-
     return {
         init: init
     }

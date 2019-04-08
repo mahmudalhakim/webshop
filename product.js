@@ -15,6 +15,7 @@ let productRepository = (function () {
         })
     }
 
+    
     function getProductContent(product) {
         console.log(product);
         
