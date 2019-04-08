@@ -223,6 +223,27 @@ address {
   width: 100%;
 }
 
+button[type="submit"] {
+  color: white;
+}
+
+.dropdown-content li > a,
+.dropdown-content li > span {
+  border-bottom: 1px solid #FECEA8;
+}
+
+.dropdown-content {
+  top: 60px !important;
+  min-width: 200px;
+  width: -webkit-max-content !important;
+  width: -moz-max-content !important;
+  width: max-content !important;
+}
+
+.cart-qty {
+  font-size: 1rem;
+}
+
 .label-expiry {
   position: absolute;
   top: -10px;

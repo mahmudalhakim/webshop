@@ -11,10 +11,8 @@ let productRepository = (function () {
         getProduct(currentId).then(function (returndata) {
             let productModel = getProductContent(returndata[0]);
             productContainer.append(productModel)
-
         })
     }
-
     
     function getProductContent(product) {
         console.log(product);

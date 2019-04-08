@@ -4,11 +4,14 @@ $(document).ready(function () {
 
 let checkoutRepo = (function () {
     let init = function () {
+        renderCart();
         cartQuant();
         calcPrice();
-        $("#remove-cart").on("click", removeCart)
+        $(".remove-cart").on("click", removeCart)
     }
-    let quant;
+    let quant = 1;
+    let price;
+
     let cartQuant = function () {
         quant = 5;
         $("#cart-quantity").text(quant);
@@ -22,20 +25,44 @@ let checkoutRepo = (function () {
         })
     }
 
-    let price;
+    function renderCart() {
+        let title = "title"
+        let imgSrc = ""
 
-    function calcPrice() {
+        price = 1493;
+        $("#render-cart").append(`
+                                    <td>${title}</td>
+                                    <td><img src="${imgSrc}" alt="Image"> </td>
+                                    <td>
+                                        <button id="add-quant" class="btn-flat transparent">+</button>
+                                        <span id="cart-quantity">${quant}</span>
+                                        <button id="remove-quant" class="btn-flat transparent">-</button>
+                                    </td>
+                                    <td>${price}</td> `)
 
     }
 
+
+    let calcPrice = function () {
+        if (price == undefined) {
+            price = 0;
+        } else {
+            price * quant;
+        }
+        $("#price").text(price)
+    }
+    
+    
     //TODO: flytta till Cart.js
     function removeCart() {
         ls.clear();
+        $("#render-cart").remove(); //kanske ta bort?
+        price = 0;
+        calcPrice();
     }
 
-
-
     return {
-        init: init
+        init: init, 
+        calcPrice: calcPrice
     }
 })();

@@ -194,9 +194,12 @@ figure {
 
 
 
+
+
 .select-quantity {
-    display:block !important;
+    display: block !important;
 }
+
 .card-title {
     display: block;
     color: black;
@@ -256,12 +259,31 @@ address {
 
 //Cart 
 .cart-btn {
-    width:100%;
-
+    width: 100%;
 }
+button[type="submit"]{
+    color:white;
+}
+
+.dropdown-content li>a,
+.dropdown-content li>span {
+    border-bottom: 1px solid $dusty-coral;
+}
+
+.dropdown-content {
+    top: 60px !important;
+    min-width:200px;
+    width: max-content !important;
+}
+
+.cart-qty {
+    font-size: 1rem;
+}
+
+
 .label-expiry {
     position: absolute;
-    top:-10px;
+    top: -10px;
 }
 
 
