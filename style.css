@@ -160,6 +160,10 @@ figure .hero-img {
   margin-left: 15px;
 }
 
+select {
+  display: block !important;
+}
+
 .card-title {
   display: block;
   color: black;

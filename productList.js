@@ -15,13 +15,13 @@ let productList = (function () {
 
             $.each(glasses, function (key, product) {
                 let productList = $("#product-list");
+                let productUrl = `/product.html?id=${product.id}`
 
-           
                 productElement = `
                 <div class="col s12 m4 z-depth-2 ">
                     <div class="card">
                         <div class="card-image_wrap">
-                            <a href="/${product.title}">
+                            <a href="${productUrl}">
                                 <div class="card-image"><img src="${product.img}">
                                 <a class="btn-floating hoverable halfway-fab waves-effect waves-light red">
                                 <i class="material-icons">favorite_border</i></a>
@@ -34,7 +34,7 @@ let productList = (function () {
                         <p class="card-description">${product.description}</p>
                     </div>
                     <div class="card-action">
-                    <a href="/${product.title}">${product.price}</a><a href="/${product.title}" class="waves-effect waves-light btn selling-btn">Buy now</a>
+                    <a href="${productUrl}">${product.price}</a><a href="${productUrl}" class="waves-effect waves-light btn selling-btn">Buy now</a>
                     </div>
                 </div>
                 </div> `
@@ -44,6 +44,8 @@ let productList = (function () {
             })
         });
     }
+
+    
 
     return {
         init: init
