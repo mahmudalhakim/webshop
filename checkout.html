@@ -20,7 +20,7 @@
                     <a href="index.html" class="brand-logo h2 center uppercase ">Sunkissed and <br> fabulous</a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i
+                        <li><a class="dropdown-trigger" href="checkout.html" data-target="dropdown1"><i
                                     class="material-icons">shopping_cart</i></a></li>
                         <li><a class="cart-items" href="#"></a></li>
                     </ul>
@@ -32,6 +32,7 @@
                         <li class="tab"><a href="#test3">Classic</a></li>
                         <li class="tab"><a href="#test4">Club</a></li>
                         <li class="tab"><a href="#test4">Original</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -49,10 +50,8 @@
 
         <!-- Dropdown Structure -->
         <ul id="dropdown1" class="dropdown-content">
-            <li><a href="#!">one</a></li>
-            <li><a href="#!">two</a></li>
             <li class="divider"></li>
-            <li><a href="#!">three</a></li>
+
         </ul>
     </header>
 
@@ -63,91 +62,150 @@
                     <h4>Your cart</h>
                 </span>
             </div>
+            <button class="btn-small white black-text right remove-cart" id="remove-cart">Remove cart</button>
 
             <div id="displayCart">
                 <table>
                     <thead>
                         <tr>
                             <th>Glasses</th>
-                            <th>Item Description</th>
+                            <th>Image</th>
+                            <th>Quantity</th>
                             <th>Item Price</th>
                         </tr>
                     </thead>
-
                     <tbody>
-                        <tr>
-                            <td>Image of Aviator</td>
-                            <td>Toned glass</td>
-                            <td>1000kr(Hämta info från LocalStorage)</td>
-                        </tr>
-                        <tr>
-                            <td>Image of Club</td>
-                            <td>Latest clubmasters</td>
-                            <td>1200kr(Hämta Info från LocalStorage)</td>
-                        </tr>
-                        <tr>
-                            <td>Image of Originals</td>
-                            <td>Classic Original</td>
-                            <td>1100kr (Hämta info från LocalStorage)</td>
+                        <tr id="render-cart">
+
                         </tr>
                     </tbody>
                 </table>
+                <h4>Price: <span id="price"></span></h4>
             </div>
-        </div>
 
-        <!-- LINE -->
-        <div class="container">
+
+            <!-- LINE -->
             <div class="line-coral">
                 <span>
                     <h4>Please fill in your details</h>
                 </span>
             </div>
-        </div>
-        <!-- LINE -->
+            <!-- LINE -->
 
-        <!-- DETAILS START -->
-        <div class="container">
+            <!-- DETAILS START -->
             <div class="row">
-                <form class="col s12">
-                    <div class="row">
-                        <div class="input-field col s12 m6 l6 ">
-                            <input id="first_name" type="text" class="validate">
-                            <label for="first_name">First Name</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <input id="last_name" type="text" class="validate">
-                            <label for="last_name">Last Name</label>
-                        </div>
+                <form>
+                    <div class="input-field col s12 m6 l6 ">
+                        <input id="first_name" type="text" class="validate" novalidate>
+                        <label for="first_name">First Name</label>
                     </div>
-
-                    <div class="row">
-                        <div class="input-field col s12 m6 l6">
-                            <input type="text" class="validate">
-                            <label for="password">Phone number</label>
-                        </div>
-                        <div class="input-field col s12 m6 l6">
-                            <input id="email" type="email" id="validateEmail">
-                            <label for="email">Email</label>
-                            <div class="showMsg">Please enter a valid email address (jquery)</div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="input-field col s12 m6 l6">
-                            <input type="text" class="validate">
-                            <label for="password">Address</label>
-                        </div>
-                        <div class="input-field col s12 m6 l6">
-                            <input type="text" class="validate">
-                            <label>Zip code</label>
-                        </div>
+                    <div class="input-field col s6">
+                        <input id="last_name" type="text" class="validate" novalidate>
+                        <label for="last_name">Last Name</label>
                     </div>
 
 
+                    <div class="input-field col s12 m6 l6">
+                        <input type="tel" class="validate" id="phone" maxlength="12" novalidate>
+                        <label for="phone">Phone number</label>
+                    </div>
+                    <div class="input-field col s12 m6 l6">
+                        <input id="email" type="email" id="validateEmail" novalidate>
+                        <label for="email">Email</label>
+                        <div class="showMsg">Please enter a valid email address (jquery)</div>
+                    </div>
+
+                    <div class="input-field col s12 m6 l6">
+                        <input type="text" class="validate" id="address" novalidate>
+                        <label for="address">Address</label>
+                    </div>
+                    <div class="input-field col s12 m6 l6">
+                        <input type="number" id="zip" class="validate" novalidate>
+                        <label for="zip">Zip code</label>
+                    </div>
+
+                    <div class="col m6 offset-m3">
+                        <button type="button" class="btn cart-btn waves-effect waves-light" id="continue_payment">Continue to
+                            payment</button>
+                    </div>
+
+
+                    <div class="row" id="payment-method">
+                        <div class="line-coral">
+                            <span>
+                                <h4>Please fill in your details</h>
+                            </span>
+                        </div>
+                        <div class="col md8 offset-m2">
+
+
+                            <div class="input-field col s12 m4 l4">
+                                <select id="" novalidate>
+                                    <option value="visa">Visa</option>
+                                    <option value="MasterCard">MasterCard</option>
+                                    <option value="American Express">American Express</option>
+                                </select>
+                                <label class="">Type</label>
+                            </div>
+                            <div class="input-field col s12 m6 l6 ">
+                                <input id="card_name" type="text" class="validate" novalidate>
+                                <label for="card_name">Card holder's name:</label>
+                            </div>
+                            <div class="input-field col s6 m7">
+                                <input id="card_number" type="number" class="validate" novalidate>
+                                <label for="card_number">Card number</label>
+                            </div>
+
+                            <div class="input-field col s12 m5 l5">
+                                <div class="col m3">
+                                    <label class="label-expiry">Expiry date (mm/yyyy)</label>
+
+                                    <select id="" novalidate>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+
+                                    </select>
+                                </div>
+                                <div class="col m4">
+                                    <select id="" novalidate>
+                                        <option value="">2019</option>
+                                        <option value="">2020</option>
+                                        <option value="">2021</option>
+                                        <option value="">2022</option>
+                                        <option value="">2023</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-field col s6 m6 ">
+                                <input id="cvc" type="tel" maxlength="3" class="validate" novalidate>
+                                <label for="cvc">CVC</label>
+                            </div>
+
+                            <div class="col m6 offset-m2">
+
+                                <button type="submit" value="Lets ship!" class="btn cart-btn waves-effect waves-light">Lets ship!</button>
+                                <!-- <a class="btn cart-btn waves-effect waves-light">Lets ship!</a> -->
+                            </div>
                 </form>
+
             </div>
+
+
         </div>
+        </div>
+
         <!-- DETAILS END -->
+
     </main>
 
     <!-- LINE -->
@@ -199,45 +257,48 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
     </script>
-<script>
-   /*  $(document).ready(function() {
+    <script>
+        // $(document).ready(function() {
 
-        // Samla all info om kunden i ett objekt. Använda . notation för att komma åt innehållet. 
-        let $userData = [];
-        let $fname = $('first-name').val();
-        let $lname = $('las')
+        //     // Samla all info om kunden i ett objekt. Använda . notation för att komma åt innehållet. 
+        //     let $userData = [];
+        //     let $fname = $('first-name').val();
+        //     let $lname = $('las')
 
-        let $email = $('input').val();
+        //     let $email = $('input').val();
 
-        console.log($email);
-        function validateEmail($email) {
-            let emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-            $("#validateEmail").mouseout(function () {
-                $(".showMsg").append("Handler for .mouseleave() called.");
-                console.log(emailReg.test($email));
-                return emailReg.test($email);
-            });
-    
-        };
-    }); */
+        //     console.log($email);
+        //     function validateEmail($email) {
+        //         let emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        //         $("#validateEmail").mouseout(function () {
+        //             $(".showMsg").append("Handler for .mouseleave() called.");
+        //             console.log(emailReg.test($email));
+        //             return emailReg.test($email);
+        //         });
 
+        //     };
+        // });
 
         // Kolla tomma fält. Använder trim för att ta bort alla tomma fält före och efter
         /* if ($.trim(sEmail).length == 0 || $("#fname").val() == "" || $("#lname").val() == "") {
             alert('All fields are mandatory');
             e.preventDefault();
         }; */
-
-</script>
-
+    </script>
 
 
-    
+
+
     <script src="main.js"></script>
     <script src="materializeRepo.js"></script>
     <script src="localstorage.js"></script>
+<<<<<<< HEAD
     <script src="productList.js"></script>
     <script src="cart.js"></script>
+=======
+    <script src="checkout.js"></script>
+    <!-- <script src="cart.js"></script> -->
+>>>>>>> eff3bc5193ac67f9f5b8debed9cec1a19d02fd0e
     <script src="js/materialize.js"></script>
 
 </body>

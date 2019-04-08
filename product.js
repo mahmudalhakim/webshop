@@ -12,10 +12,9 @@ let productRepository = (function () {
             /* console.log(returndata[0]); // Retunerar objektet
             console.log(returndata); // Retunerar array med objektet */
             let productModel = getProductContent(returndata[0]);
-            productContainer.append(productModel);
+            productContainer.append(productModel)
         })
     }
-
     
     function getProductContent(product) {
         console.log(product);
@@ -40,9 +39,8 @@ let productRepository = (function () {
                           <p>${product.description}</p>
                           <p class="mt-4"><strong>Color:</strong> Black</p>
                           <div class="product-sell_wrap">
-                              <div class="col s12 m3">
-                                  <select>
-                                      <option value="" disabled selected>pcs</option>
+                              <div class="input-field col s12 m3">
+                                  <select class="select-quantity">
                                       ${getStockValue(product.inStock)} 
                                   </select>
                               </div>
