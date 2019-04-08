@@ -44,7 +44,7 @@ let productRepository = (function () {
                                       ${getStockValue(product.inStock)} 
                                   </select>
                               </div>
-                              <a href="" class="btn-large waves-effect waves-light ml-20"><i
+                              <a href="" id="addToBasket" class="btn-large waves-effect waves-light ml-20"><i
                                       class="material-icons left">shopping_cart</i>Add to cart</a>
   
                           </div>
@@ -63,7 +63,7 @@ let productRepository = (function () {
         return selections;
     }
 
-    function getUrlParameter(sParam) {
+    let getUrlParameter = function(sParam) {
         var sPageURL = window.location.search.substring(1),
             sURLVariables = sPageURL.split('?'),
             sParameterName,
@@ -87,6 +87,7 @@ let productRepository = (function () {
     }
 
     return {
-        init: init
+        init: init,
+        getUrlParameter: getUrlParameter
     }
 })();
