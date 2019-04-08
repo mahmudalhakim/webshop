@@ -9,8 +9,6 @@ let productRepository = (function () {
         let currentId = getUrlParameter('id');
 
         getProduct(currentId).then(function (returndata) {
-            /* console.log(returndata[0]); // Retunerar objektet
-            console.log(returndata); // Retunerar array med objektet */
             let productModel = getProductContent(returndata[0]);
             productContainer.append(productModel)
         })
