@@ -2,7 +2,6 @@ $(document).ready(function () {
     orderConfirmation.init();
 })
 
-
 let orderConfirmation = (function () {
     let init = function () {
         currentBasket();
@@ -25,7 +24,6 @@ let orderConfirmation = (function () {
     </table>`;
         $("#orderConfirmation").html(result)
     };
-
 
     function getCartContent() {
         let productContent = '';
@@ -53,4 +51,4 @@ let orderConfirmation = (function () {
         init: init,
     }
 
-})(); // orderConfirmation init
+})(); // IIFE

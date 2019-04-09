@@ -21,4 +21,4 @@ let ls = (function () {
         removeItem: removeItem,
         clear: clear,
     };
-})();
+})(); //IIFE

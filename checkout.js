@@ -5,6 +5,8 @@ $(document).ready(function () {
 let checkoutRepo = (function () {
     let init = function () {
         currentBasket();
+        $("button[type='submit']").on("click", validate())
+
         $(".remove-cart").on("click", removeCart)
         $(document).on('click', "#plus", function (e) {
             e.preventDefault();
@@ -12,7 +14,6 @@ let checkoutRepo = (function () {
             let newProductQuantity = +$("#cart-quantity").text();
             let productId = $(this).data('id'); //tydligt vilket ID (produkt) som ska modifieras
             modifyProduct(productId, ++newProductQuantity);
-
         })
 
         $(document).on('click', "#minus", function (e) {
@@ -74,19 +75,54 @@ let checkoutRepo = (function () {
                                         `
 
             totalPrice += product.price * product.quantity;
-
         }
-        $("#price").text(totalPrice + "kr")
 
+        $("#price").text(totalPrice + "kr")
         return productContent;
     }
 
-    function test() {
+    /* OURVALIDATE START */
+    function validate() {
+        $('.cart-btn').click(function () {
+            let fname = $('#first-name').val();
+            let lname = $('#last-name').val();
+            let email = $('#email').val();
+            let phone = $('#phone').val();
+            let message = $('#message').val();
+            console.log(fname + lname + email + phone + message);
+            if (fname == '') {
+                alert('Please enter a valid Name');
+                return false;
+            }
+            if (lname == '') {
+                alert('Please enter a valid Last name');
+                return false;
+            }
+            if (phone == '') {
+                alert('Please enter a valid phone number');
+                return false;
+            }
+            if (email == '') {
+                alert('Please enter an email address');
+                return false;
+            }
+            if (IsEmail(email) == false) {
+                alert('Please enter a valid email address');
+                return false;
+            }
+            return false;
+        });
 
-
+        function IsEmail(email) {
+            var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (!regex.test(email)) {
+                return false;
+            } else {
+                return true;
+            }
+        }
     }
-
-
+    /* OURVALIDATE FINISH*/
 
     $(document).on("change", ".select-q", function () {
         let newProductQuantity = ($(this).val())
@@ -97,13 +133,12 @@ let checkoutRepo = (function () {
         ls.removeItem(productId)
         ls.setItem(productId, productModel);
 
-
         getCartContent();
     })
 
     function getOptions(stock) {
         let options = "";
-        for (let i = 1; i < stock +1; i++) {
+        for (let i = 1; i < stock + 1; i++) {
             options += `<option id="hej" value="${[i]}">${[i]}</option>`
         }
         return options;
@@ -121,4 +156,4 @@ let checkoutRepo = (function () {
         currentBasket: currentBasket
     }
 
-})();
+})(); //IIFE
