@@ -31,6 +31,7 @@ let cartRepository = (function () { // Vad och när saker ska hända
             title: product.title,
             img: product.img,
             price: product.price,
+            inStock:product.inStock,
             quantity: quantity
 
         }

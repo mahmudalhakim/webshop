@@ -49,13 +49,12 @@ let productRepository = (function () {
                       </div>`
     }
 
-    function getStockValue(inStock) {
+    let getStockValue = function(inStock) {
         let selections;
 
         for (let i = 1; i <= inStock; i++) {
             selections += `<option value="${[i]}">${[i]}</option>`;
         }
-
         return selections;
     }
 
@@ -85,6 +84,7 @@ let productRepository = (function () {
     return {
         init: init,
         getUrlParameter: getUrlParameter,
-        getProduct: getProduct
+        getProduct: getProduct, 
+        getStockValue: getStockValue
     }
 })();

@@ -11,7 +11,7 @@ let ls = (function () {
         return localStorage.removeItem(key);
     }
 
-    let clear = function (key) {
+    let clear = function () {
         return localStorage.clear();
     }
 
