@@ -32,6 +32,7 @@ let cartRepository = (function () { // Vad och när saker ska hända
             img: product.img,
             price: product.price,
             description: product.description,
+            inStock:product.inStock,
             quantity: quantity
 
         }
@@ -54,9 +55,6 @@ let cartRepository = (function () { // Vad och när saker ska hända
 
         return product;
 
-    }
-
-    function success(result) {
     }
 
     // Kollar om det ligger nått i kundvagnen redan
