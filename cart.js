@@ -21,6 +21,9 @@ let cartRepository = (function () { // Vad och när saker ska hända
 
 
         });
+        $(".remove-cart").on("click", function () {
+            removeCart();
+        })
     }
 
     let populateProductModel = function (productId, quantity) {
@@ -57,7 +60,12 @@ let cartRepository = (function () { // Vad och när saker ska hända
 
     }
 
-    function success(result) {
+    function removeCart() {
+        ls.clear();
+
+        $("#render-cart").remove();
+        checkoutRepo.getCartContent()
+        location.reload();
     }
 
     // Kollar om det ligger nått i kundvagnen redan

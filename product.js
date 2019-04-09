@@ -19,14 +19,7 @@ let productRepository = (function () {
         <div class="col s12 m6">
                           <div class="product-img_container">
                               <img class="product-img dusty-green z-depth-2 hoverable" src="${product.img}" alt="">
-                              <div class="justify-center">
-                                  <img class="product-img_tiny dusty-green z-depth-2 hoverable" src="${product.img}"
-                                      alt="Closeup avaitor">
-                                  <img class="product-img_tiny dusty-green z-depth-2 hoverable" src="${product.img}"
-                                      alt="Closeup avaitor">
-                                  <img class="product-img_tiny dusty-green z-depth-2 hoverable" src="${product.img}"
-                                      alt="Closeup avaitor">
-                              </div>
+                              
                           </div>
                       </div>
                       <div class="col s12 m5 offset-m1">
@@ -44,8 +37,10 @@ let productRepository = (function () {
                                       class="material-icons left">shopping_cart</i>Add to cart</a>
   
                           </div>
+                          <div class="delivery-info">
                           <p class="product-smallest">Lagerstatus: <span id="inStore">${product.inStock}</span></p>
                           <p class="product-smallest italic"><strong><i class="material-icons left">local_shipping</i> Standard</strong> delivery all over the world</p>
+                          </div>
                       </div>`
     }
 

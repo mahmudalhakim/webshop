@@ -5,37 +5,8 @@ $(document).ready(function () {
 let checkoutRepo = (function () {
     let init = function () {
         currentBasket();
-        $(".remove-cart").on("click", removeCart)
-        $(document).on('click', "#plus", function (e) {
-            e.preventDefault();
 
-            let newProductQuantity = +$("#cart-quantity").text();
-            let productId = $(this).data('id'); //tydligt vilket ID (produkt) som ska modifieras
-            modifyProduct(productId, ++newProductQuantity);
-
-        })
-
-        $(document).on('click', "#minus", function (e) {
-            e.preventDefault();
-
-            let newProductQuantity = +$("#cart-quantity").text();
-            let productId = $(this).data('id');
-
-            modifyProduct(productId, --newProductQuantity);
-        })
     }
-
-    function modifyProduct(productId, newProductQuantity) {
-        let productModel = cartRepository.populateProductModel(productId, newProductQuantity);
-
-        if (newProductQuantity == 0) return;
-
-        ls.removeItem(productId)
-        ls.setItem(productId, productModel);
-
-        $("#cart-quantity").text(newProductQuantity)
-    }
-
     let currentBasket = function () {
         let result = `<table>
             <thead>
@@ -44,6 +15,7 @@ let checkoutRepo = (function () {
                 <th>Image</th>
                 <th>Quantity</th>
                 <th>Item Price</th>
+                <th>Remove</th>
             </tr>
                     </thead >
         <tbody>
@@ -53,7 +25,7 @@ let checkoutRepo = (function () {
         $("#display-cart").html(result)
     };
 
-    function getCartContent() {
+    let getCartContent = function () {
         let productContent = '';
         let totalPrice = null;
 
@@ -70,22 +42,29 @@ let checkoutRepo = (function () {
                                         </select>
                                         </td>
                                         <td>${product.price}</td> 
+                                        <td><button data-remove="${product.id}" class="remove">x</button></td> 
                                         </tr>
                                         `
 
             totalPrice += product.price * product.quantity;
-
         }
-        $("#price").text(totalPrice + "kr")
+        if (totalPrice == null) {
+            totalPrice = 0;
+        }
 
+        $("#price").text(totalPrice + "kr")
         return productContent;
     }
 
-    function test() {
 
 
-    }
+    $(document).on("click", ".remove", function () {
+        let productId = $(this).data('remove');
+        ls.removeItem(productId);
+        getCartContent();
+        location.reload()
 
+    })
 
 
     $(document).on("change", ".select-q", function () {
@@ -97,28 +76,24 @@ let checkoutRepo = (function () {
         ls.removeItem(productId)
         ls.setItem(productId, productModel);
 
-
         getCartContent();
     })
 
     function getOptions(stock) {
         let options = "";
-        for (let i = 1; i < stock +1; i++) {
+        for (let i = 1; i < stock + 1; i++) {
             options += `<option id="hej" value="${[i]}">${[i]}</option>`
         }
         return options;
     }
 
     //TODO: flytta till Cart.js
-    function removeCart() {
-        ls.clear();
-        // $("#render-cart").remove();
-        calculateQuantity(0, 0)
-    }
+
 
     return {
         init: init,
-        currentBasket: currentBasket
+        currentBasket: currentBasket,
+        getCartContent: getCartContent
     }
 
 })();
