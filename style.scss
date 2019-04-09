@@ -18,8 +18,10 @@ cursive;
     margin: 0;
 }
 
-html {
+body {
     font-family: $bodyfont;
+    height: 100%;
+
 }
 
 nav.nav-extended {
@@ -31,6 +33,20 @@ nav.nav-extended {
 
     a {
         color: $teal !important;
+    }
+}
+
+.nav-center {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.tab a {
+    padding: 0 13px !important;
+
+    &:hover {
+        color: $dusty-coral !important;
     }
 }
 
@@ -46,7 +62,36 @@ h1 {
     color: $coral;
 }
 
-footer {
+.footer {
+    position: relative;
+    width: 100vw;
+    bottom: 0px;
+    height: auto;
+
+    h5 {
+        text-align: center;
+        font-size: 2rem;
+        font-family: $bodyfont;
+        font-weight: 700;
+        color: $coral;
+    }
+
+    ul {
+        li {
+            a {
+                text-decoration: none;
+                color: $pink;
+            }
+        }
+    }
+}
+
+.footer-abs {
+    position: absolute;
+    width: 100vw;
+    bottom: 0px;
+    height: auto;
+
     h5 {
         text-align: center;
         font-size: 2rem;
@@ -212,11 +257,22 @@ figure {
     padding: 0 30px;
 }
 
+.card {
+    height:550px !important;
+}
+
+.card .card-action {
+    position: absolute !important;
+    bottom:0 !important;
+    left:10px !important;
+    right:10px !important;
+}
 
 .card-image {
     background: linear-gradient(to top, #99b898 0%, #c9ddc9 100%);
-    padding: 40px 0;
-    min-height: 250px;
+    padding: 60px 0;
+    height: 320px;
+    
 
     .card-action {
         background-color: white;
@@ -244,13 +300,6 @@ figure {
 }
 
 
-//Footer
-.footer {
-    width: 100vw;
-    height: 400px;
-    background-color: $dusty-coral;
-
-}
 
 address {
     color: $pink;
@@ -261,8 +310,9 @@ address {
 .cart-btn {
     width: 100%;
 }
-button[type="submit"]{
-    color:white;
+
+button[type="submit"] {
+    color: white;
 }
 
 .dropdown-content li>a,
@@ -272,7 +322,7 @@ button[type="submit"]{
 
 .dropdown-content {
     top: 60px !important;
-    min-width:200px;
+    min-width: 200px;
     width: max-content !important;
 }
 
@@ -286,8 +336,6 @@ button[type="submit"]{
     top: -10px;
 }
 
-
-
 //productpage
 .product-img_container {
     width: 100%;
@@ -296,17 +344,18 @@ button[type="submit"]{
     height: 400px;
 
     .product-img {
-        width: 75%;
+        width: 100%;
         float: right;
         padding: 100px 50px;
     }
+}
+#product-container {
+    margin-top: 80px;
+}
 
-    .product-img_tiny {
-        width: 20%;
-        float: left;
-        margin: 0% 1% 5% 0%;
-        padding: 20px 10px;
-    }
+.delivery-info {
+    display:block;
+    padding: 10px 0;
 }
 
 .product-small {
@@ -326,6 +375,13 @@ button[type="submit"]{
 @media (max-width:900px) {
     .hero-img {
         height: 400px !important;
+        
+    }
+    .footer-abs {
+        position: relative;
+    }
+    nav.nav-extended .nav-wrapper {
+        min-height: 50px;
     }
 }
 

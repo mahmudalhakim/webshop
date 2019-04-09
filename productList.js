@@ -17,14 +17,11 @@ let productList = (function () {
                 let productUrl = `/product.html?id=${product.id}`
 
                 productElement = `
-                <div class="col s12 m4 z-depth-2 ">
+                <div class="col s12 m4">
                     <div class="card">
                         <div class="card-image_wrap">
                             <a href="${productUrl}">
                                 <div class="card-image"><img src="${product.img}">
-                                <a class="btn-floating hoverable halfway-fab waves-effect waves-light red">
-                                <i class="material-icons">favorite_border</i></a>
-                                </div>
                             </a>
                     </div>
                 <div class="card-container">

@@ -3,17 +3,14 @@ $(document).ready(function () {
 
 })
 
-
 let materializeRepo = (function () {
-    let init = function () {        
+    let init = function () {
         $('.sidenav').sidenav();
         select();
     }
 
-
+    //Från materialize
     function select() {
-        // Or with jQuery
-
         $(document).ready(function () {
             $('select').formSelect();
         });

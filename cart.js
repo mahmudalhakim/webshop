@@ -19,6 +19,9 @@ let cartRepository = (function () { // Vad och när saker ska hända
             console.log(productModel);
             ls.setItem(id, productModel)
         });
+        $(".remove-cart").on("click", function () {
+            removeCart();
+        })
     }
 
     let populateProductModel = function (productId, quantity) {
@@ -49,6 +52,15 @@ let cartRepository = (function () { // Vad och när saker ska hända
             async: false,
         });
         return product;
+
+    }
+
+    function removeCart() {
+        ls.clear();
+
+        $("#render-cart").remove();
+        checkoutRepo.getCartContent()
+        location.reload();
     }
 
     // Kollar om det ligger nått i kundvagnen redan

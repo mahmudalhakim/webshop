@@ -3,8 +3,9 @@
   margin: 0;
 }
 
-html {
+body {
   font-family: "Poppins", sans-serif;
+  height: 100%;
 }
 
 nav.nav-extended {
@@ -19,6 +20,20 @@ nav.nav-extended a {
   color: #2A363B !important;
 }
 
+.nav-center {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.tab a {
+  padding: 0 13px !important;
+}
+
+.tab a:hover {
+  color: #FECEA8 !important;
+}
+
 ul a {
   font-family: 'Poppins', sans-serif;
 }
@@ -29,7 +44,14 @@ h1 {
   color: #FF847C;
 }
 
-footer h5 {
+.footer {
+  position: relative;
+  width: 100vw;
+  bottom: 0px;
+  height: auto;
+}
+
+.footer h5 {
   text-align: center;
   font-size: 2rem;
   font-family: "Poppins", sans-serif;
@@ -37,7 +59,27 @@ footer h5 {
   color: #FF847C;
 }
 
-footer ul li a {
+.footer ul li a {
+  text-decoration: none;
+  color: #E84A5F;
+}
+
+.footer-abs {
+  position: absolute;
+  width: 100vw;
+  bottom: 0px;
+  height: auto;
+}
+
+.footer-abs h5 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #FF847C;
+}
+
+.footer-abs ul li a {
   text-decoration: none;
   color: #E84A5F;
 }
@@ -176,11 +218,22 @@ figure .hero-img {
   padding: 0 30px;
 }
 
+.card {
+  height: 550px !important;
+}
+
+.card .card-action {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 10px !important;
+  right: 10px !important;
+}
+
 .card-image {
   background: -webkit-gradient(linear, left bottom, left top, from(#99b898), to(#c9ddc9));
   background: linear-gradient(to top, #99b898 0%, #c9ddc9 100%);
-  padding: 40px 0;
-  min-height: 250px;
+  padding: 60px 0;
+  height: 320px;
 }
 
 .card-image .card-action {
@@ -206,12 +259,6 @@ figure .hero-img {
 
 .teal {
   background-color: #2A363B;
-}
-
-.footer {
-  width: 100vw;
-  height: 400px;
-  background-color: #FECEA8;
 }
 
 address {
@@ -255,16 +302,18 @@ button[type="submit"] {
 }
 
 .product-img_container .product-img {
-  width: 75%;
+  width: 100%;
   float: right;
   padding: 100px 50px;
 }
 
-.product-img_container .product-img_tiny {
-  width: 20%;
-  float: left;
-  margin: 0% 1% 5% 0%;
-  padding: 20px 10px;
+#product-container {
+  margin-top: 80px;
+}
+
+.delivery-info {
+  display: block;
+  padding: 10px 0;
 }
 
 .product-small {
@@ -283,6 +332,12 @@ button[type="submit"] {
 @media (max-width: 900px) {
   .hero-img {
     height: 400px !important;
+  }
+  .footer-abs {
+    position: relative;
+  }
+  nav.nav-extended .nav-wrapper {
+    min-height: 50px;
   }
 }
 
