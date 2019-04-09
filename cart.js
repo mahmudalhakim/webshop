@@ -31,10 +31,10 @@ let cartRepository = (function () { // Vad och när saker ska hända
             title: product.title,
             img: product.img,
             price: product.price,
+            description: product.description,
             quantity: quantity
 
         }
-
         return productModel;
     }
     function findProductFromFile(productId) {

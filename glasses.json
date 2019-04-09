@@ -14,7 +14,7 @@
         "price": 1500,
         "inStock": 12,
         "img": "images/sunglasses-club-tortoise.png", 
-        "description": "Lorem Ipsum"
+        "description": "Ray-Ban Clubmaster Classic sunglasses are retro and timeless. Inspired by the 50’s, the unmistakable design of the Clubmaster Classic is worn by cultural intellectuals, those who lead the changed tomorrow."
     },
     {
         "id": 3,
@@ -22,7 +22,7 @@
         "price": 1200,
         "inStock": 3,
         "img": "images/sunglasses-lightblue.png", 
-        "description": "Lorem Ipsum"
+        "description": "The Ray-Ban ® Round Metal sunglasses are totally retro. This look has been worn by legendary musicians and inspired by the 1960s counter-culture when this style first originated.The Ray-Ban unisex metal, iconic sunglasses are known for their defined round crystal lenses and distinct shape."
     },
     {
         "id": 4,
@@ -30,7 +30,7 @@
         "price": 1400,
         "inStock": 5,
         "img": "images/sunglasses-limegreen.png", 
-        "description": "Lorem Ipsum"
+        "description": "Ray-Ban Justin sunglasses may just be one of the coolest looks in the Ray-Ban collection. Inspired by the iconic Wayfarer sunglasses, this style has been redesigned with slightly larger rectangle lenses, fresh new frame colors, stunning colored lenses and a rubberized frame finish to really give it that extra edge."
     },
     {
         "id": 5,
@@ -38,7 +38,7 @@
         "price": 1450,
         "inStock": 8,
         "img": "images/sunglasses-men.png", 
-        "description": "Lorem Ipsum"
+        "description": "Introducing the new RB4226, inspired by popular modern Ray-Ban styles but given an innovative masculine twist. The model comes with the options of gradient, mirror and polar lenses. "
     },
     {
         "id": 6,
@@ -46,7 +46,7 @@
         "price": 1600,
         "inStock": 2,
         "img": "images/sunglasses-rayban-blue.png", 
-        "description": "Lorem Ipsum"
+        "description": "Now available in sleek metal styles, the oversized round shape and the soft keyhole bridge add a twist to this style while flattering your face shape."
     },
     {
         "id": 7,
@@ -62,7 +62,7 @@
         "price": 1200,
         "inStock": 4,
         "img": "images/sunglasses-rayban-orange.png", 
-        "description": "Lorem Ipsum"
+        "description": "Ray-Ban phantos orange sunglasses with brown gradient lenses. Come in a designer-stamped case."
     },
     {
         "id": 9,
@@ -70,7 +70,7 @@
         "price": 1550,
         "inStock": 3,
         "img": "images/sunglasses-rayban-tortoise.png", 
-        "description": "Lorem Ipsum"
+        "description": "Irregular is the new standout with RB 4258. Made from modern materials, they are rugged enough to stand up to anything the city can throw at them"
     },
     {
         "id": 10,
@@ -78,7 +78,7 @@
         "price": 1650,
         "inStock": 7,
         "img": "images/sunglasses-wayfarer-blueblack.png", 
-        "description": "Lorem Ipsum"
+        "description": "Ray-Ban Junior phantos violet injected sunglasses with light grey/dark grey gradient lenses. Come in a designer-stamped case."
     }
 ]
 }
