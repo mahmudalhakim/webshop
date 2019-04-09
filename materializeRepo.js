@@ -6,9 +6,7 @@ $(document).ready(function () {
 
 let materializeRepo = (function () {
     let init = function () {        
-        $(".dropdown-trigger").dropdown();
         $('.sidenav').sidenav();
-        
         select();
     }
 
