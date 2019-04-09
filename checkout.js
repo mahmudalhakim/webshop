@@ -5,8 +5,7 @@ $(document).ready(function () {
 let checkoutRepo = (function () {
     let init = function () {
         currentBasket();
-
-    }
+    } 
     let currentBasket = function () {
         let result = `<table>
             <thead>
@@ -66,6 +65,48 @@ let checkoutRepo = (function () {
 
     })
 
+    /* OURVALIDATE START */
+    function validate() {
+        $('.cart-btn').click(function () {
+            let fname = $('#first-name').val();
+            let lname = $('#last-name').val();
+            let email = $('#email').val();
+            let phone = $('#phone').val();
+            let message = $('#message').val();
+            console.log(fname + lname + email + phone + message);
+            if (fname == '') {
+                alert('Please enter a valid Name');
+                return false;
+            }
+            if (lname == '') {
+                alert('Please enter a valid Last name');
+                return false;
+            }
+            if (phone == '') {
+                alert('Please enter a valid phone number');
+                return false;
+            }
+            if (email == '') {
+                alert('Please enter an email address');
+                return false;
+            }
+            if (IsEmail(email) == false) {
+                alert('Please enter a valid email address');
+                return false;
+            }
+            return false;
+        });
+
+        function IsEmail(email) {
+            var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (!regex.test(email)) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    }
+    /* OURVALIDATE FINISH*/
 
     $(document).on("change", ".select-q", function () {
         let newProductQuantity = ($(this).val())
@@ -96,4 +137,4 @@ let checkoutRepo = (function () {
         getCartContent: getCartContent
     }
 
-})();
+})(); //IIFE

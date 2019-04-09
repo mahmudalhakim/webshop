@@ -18,8 +18,6 @@ let cartRepository = (function () { // Vad och när saker ska hända
             let id = productModel.id;
             console.log(productModel);
             ls.setItem(id, productModel)
-
-
         });
         $(".remove-cart").on("click", function () {
             removeCart();
@@ -34,15 +32,14 @@ let cartRepository = (function () { // Vad och när saker ska hända
             title: product.title,
             img: product.img,
             price: product.price,
+            description: product.description,
             inStock:product.inStock,
             quantity: quantity
-
         }
-
         return productModel;
     }
-    function findProductFromFile(productId) {
 
+    function findProductFromFile(productId) {
         let product;
 
         $.ajax({
@@ -50,12 +47,10 @@ let cartRepository = (function () { // Vad och när saker ska hända
             dataType: 'json', //json data type
             success: function (result) {
                 product = result.glasses[productId - 1]; //Hämtar objektet
-
             },
             error: function () { alert('feeel') },
             async: false,
         });
-
         return product;
 
     }
