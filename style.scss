@@ -238,11 +238,11 @@ figure {
 }
 
 
-
-
-
 .select-quantity {
     display: block !important;
+}
+.select-wrapper {
+    width:60px !important;
 }
 
 .card-title {
@@ -258,7 +258,7 @@ figure {
 }
 
 .card {
-    height:550px !important;
+    height:680px !important;
 }
 
 .card .card-action {
@@ -310,19 +310,18 @@ address {
 .cart-btn {
     width: 100%;
 }
+.checkout-img {
+    width:200px;
+}
 
 button[type="submit"] {
     color: white;
 }
 
-.dropdown-content li>a,
-.dropdown-content li>span {
-    border-bottom: 1px solid $dusty-coral;
-}
 
 .dropdown-content {
     top: 60px !important;
-    min-width: 200px;
+    min-width: 70px;
     width: max-content !important;
 }
 

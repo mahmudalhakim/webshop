@@ -5,6 +5,7 @@ $(document).ready(function () {
 let checkoutRepo = (function () {
     let init = function () {
         currentBasket();
+        validate();
     } 
     let currentBasket = function () {
         let result = `<table>
@@ -32,7 +33,7 @@ let checkoutRepo = (function () {
             let product = ls.getItem(localStorage.key(i));
             productContent += `<tr id="render-cart">            
                                     <td>${product.title}</td>
-                                        <td><img src="${product.img}" alt="Image"> </td>
+                                        <td><img class="checkout-img" src="${product.img}" alt="${product.title}"> </td>
                                         <td>
                                         <select data-id="${product.id}" class="select-q">
                                         <option value="" disabled selected>${product.quantity}</option>
@@ -40,7 +41,7 @@ let checkoutRepo = (function () {
                                             
                                         </select>
                                         </td>
-                                        <td>${product.price}</td> 
+                                        <td>${product.price}kr</td> 
                                         <td><button data-remove="${product.id}" class="remove">x</button></td> 
                                         </tr>
                                         `
@@ -65,8 +66,9 @@ let checkoutRepo = (function () {
 
     })
 
+    
     /* OURVALIDATE START */
-    function validate() {
+    let validate = function() {
         $('.cart-btn').click(function () {
             let fname = $('#first-name').val();
             let lname = $('#last-name').val();
@@ -134,7 +136,8 @@ let checkoutRepo = (function () {
     return {
         init: init,
         currentBasket: currentBasket,
-        getCartContent: getCartContent
+        getCartContent: getCartContent,
+        validate: validate
     }
 
 })(); //IIFE

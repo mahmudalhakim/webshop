@@ -32,15 +32,15 @@ let orderConfirmation = (function () {
             let product = ls.getItem(localStorage.key(i));
             productContent += `<tr id="orderConfirmation">            
                                             <td>${product.title}</td>
-                                            <td><img src="${product.img}" alt="Image"></td>
+                                            <td><img class="checkout-img" src="${product.img}" alt="Image"></td>
                                         <td>
                                             <span id="cart-quantity">${product.quantity}</span>
                                         </td>
-                                            <td>${product.price}</td> 
+                                            <td>${product.price}kr</td> 
                                         </tr>
                                         <tr>
                                         <td></td>
-                                            <td colspan=2>Description: ${product.description}</td>
+                                            <td colspan=2><strong>Description:</strong> ${product.description}</td>
                                         </tr>
                                         `
         }

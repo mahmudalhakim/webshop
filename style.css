@@ -206,6 +206,10 @@ figure .hero-img {
   display: block !important;
 }
 
+.select-wrapper {
+  width: 60px !important;
+}
+
 .card-title {
   display: block;
   color: black;
@@ -219,7 +223,7 @@ figure .hero-img {
 }
 
 .card {
-  height: 550px !important;
+  height: 680px !important;
 }
 
 .card .card-action {
@@ -270,18 +274,17 @@ address {
   width: 100%;
 }
 
+.checkout-img {
+  width: 200px;
+}
+
 button[type="submit"] {
   color: white;
 }
 
-.dropdown-content li > a,
-.dropdown-content li > span {
-  border-bottom: 1px solid #FECEA8;
-}
-
 .dropdown-content {
   top: 60px !important;
-  min-width: 200px;
+  min-width: 70px;
   width: -webkit-max-content !important;
   width: -moz-max-content !important;
   width: max-content !important;
