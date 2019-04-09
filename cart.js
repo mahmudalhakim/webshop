@@ -27,11 +27,11 @@ let cartRepository = (function () { // Vad och när saker ska hända
         let productModel = {
             id: product.id,
             title: product.title,
+            quantity: quantity,
             img: product.img,
             price: product.price,
             description: product.description,
-            inStock:product.inStock,
-            quantity: quantity
+            inStock:product.inStock
         }
         return productModel;
     }
