@@ -115,7 +115,6 @@ let checkoutRepo = (function () {
         let productId = $(this).data('id'); //tydligt vilket ID (produkt) som ska modifieras
         let productModel = cartRepository.populateProductModel(productId, newProductQuantity);
 
-        $("#apa").text(newProductQuantity)
         ls.removeItem(productId)
         ls.setItem(productId, productModel);
 

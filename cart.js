@@ -16,7 +16,7 @@ let cartRepository = (function () { // Vad och när saker ska hända
             let productModel = populateProductModel(productId, quantity)
 
             let id = productModel.id;
-            console.log(productModel);
+            // console.log(productModel);
             ls.setItem(id, productModel)
         });
         $(".remove-cart").on("click", function () {

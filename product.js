@@ -9,12 +9,12 @@ let productRepository = (function () {
         let currentId = getUrlParameter('id');
 
         getProduct(currentId).then(function (returndata) {
-            let productModel = getProductContent(returndata[0]);
+            let productModel = _getProductContent(returndata[0]);
             productContainer.append(productModel)
         })
     }
 
-    function getProductContent(product) {
+    function _getProductContent(product) {
         return `
         <div class="col s12 m6">
                           <div class="product-img_container">
@@ -53,25 +53,27 @@ let productRepository = (function () {
         return selections;
     }
 
-    let getUrlParameter = function (sParam) {
-        var sPageURL = window.location.search.substring(1),
-            sURLVariables = sPageURL.split('?'),
-            sParameterName,
+
+    //Hjälp från http://www.jquerybyexample.net/2012/06/get-url-parameters-using-jquery.html
+    let getUrlParameter = function (Param) {
+        let PageURL = window.location.search.substring(1),
+            URLVariables = PageURL.split('?'), //I urlen står det ?id=x så den splittar från ?
+            parameterName,
             i;
 
-        for (i = 0; i < sURLVariables.length; i++) {
-            sParameterName = sURLVariables[i].split('=');
+        for (i = 0; i < URLVariables.length; i++) {
+            parameterName = URLVariables[i].split('='); //splittar från = så att ID kommer ut
 
-            if (sParameterName[0] === sParam) {
-                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            if (parameterName[0] === Param) {
+                return parameterName[1] === undefined ? true : decodeURIComponent(parameterName[1]);
             }
         }
     };
 
     let getProduct = function (currentId) { //Publik
-        return $.getJSON('glasses.json').then(function (data) {
-            return data.glasses.filter(function (product) {
-                return product.id == currentId;
+        return $.getJSON('glasses.json').then(function (data) { //Använder then för att det asynkrona JSONanropet ska bli färdigt innan funktionen körs
+            return data.glasses.filter(function (product) { //Filtrera JSONfilen
+                return product.id == currentId; //Matcha ID från JSON-filen med det aktuella idt
             });
         });
     }
