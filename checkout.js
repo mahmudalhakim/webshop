@@ -7,6 +7,7 @@ let checkoutRepo = (function () {
         currentBasket();
         validate();
     } 
+
     let currentBasket = function () {
         let result = `<table>
             <thead>
@@ -63,7 +64,6 @@ let checkoutRepo = (function () {
         ls.removeItem(productId);
         getCartContent();
         location.reload()
-
     })
 
     

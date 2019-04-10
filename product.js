@@ -3,7 +3,6 @@ $(document).ready(function () {
 })
 
 let productRepository = (function () {
-
     let init = function () {
         let productContainer = $("#product-container");
         let currentId = getUrlParameter('id');
