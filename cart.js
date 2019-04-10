@@ -1,8 +1,8 @@
 $(document).ready(function () {
-    cartRepository.init(); // document ready, första som körs. Se user status om personen har varit inne tidigare. Kolla i lokal storage. 
+    cartRepository.init(); 
 })
 
-let cartRepository = (function () { // Vad och när saker ska hända
+let cartRepository = (function () { 
     let init = function () {
         checkCartCount();
         $(document).on('click', '#addToBasket', function (e) {
@@ -12,7 +12,7 @@ let cartRepository = (function () { // Vad och när saker ska hända
             let productId = $(this).data("id");
             let quantity = $(".select-quantity").val();
 
-            //Create a new productmodel that sets the quantiy of glasses in it.
+            //Skapar en ny productModel som sätter in antalet glasögon/modell. Skriver inte över JSON, bara till LS.
             let productModel = populateProductModel(productId, quantity)
 
             let id = productModel.id;

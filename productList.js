@@ -1,6 +1,5 @@
 $(document).ready(function () {
     productList.init();
-
 })
 
 let productList = (function () {
@@ -39,7 +38,6 @@ let productList = (function () {
             })
         });
     }
-
     return {
         init: init
     }

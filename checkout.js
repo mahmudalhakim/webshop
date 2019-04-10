@@ -7,6 +7,7 @@ let checkoutRepo = (function () {
         currentBasket();
         validate();
     } 
+
     let currentBasket = function () {
         let result = `<table>
             <thead>
@@ -63,7 +64,6 @@ let checkoutRepo = (function () {
         ls.removeItem(productId);
         getCartContent();
         location.reload()
-
     })
 
     
@@ -115,7 +115,6 @@ let checkoutRepo = (function () {
         let productId = $(this).data('id'); //tydligt vilket ID (produkt) som ska modifieras
         let productModel = cartRepository.populateProductModel(productId, newProductQuantity);
 
-        $("#apa").text(newProductQuantity)
         ls.removeItem(productId)
         ls.setItem(productId, productModel);
 

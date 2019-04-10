@@ -1,6 +1,5 @@
 $(document).ready(function () {
     materializeRepo.init();
-
 })
 
 let materializeRepo = (function () {
@@ -19,6 +18,5 @@ let materializeRepo = (function () {
     return {
         init: init,
     }
-
-
+    
 })();
