@@ -9,20 +9,21 @@ let checkoutRepo = (function () {
     } 
 
     let currentBasket = function () {
-        let result = `<table>
+        let result = `
+        <table>
             <thead>
-            <tr>
+             <tr>
                 <th>Glasses</th>
                 <th>Image</th>
                 <th>Quantity</th>
                 <th>Item Price</th>
                 <th>Remove</th>
-            </tr>
-                    </thead >
-        <tbody>
+                </tr>
+            </thead>
+            <tbody>
             ${getCartContent()}
-    </tbody>
-    </table>`;
+            </tbody>
+            </table>`;
         $("#display-cart").html(result)
     };
 
