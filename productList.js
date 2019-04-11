@@ -13,7 +13,7 @@ let productList = (function () {
 
             $.each(glasses, function (key, product) {
                 let productList = $("#product-list");
-                let productUrl = `/product.html?id=${product.id}`
+                let productUrl = `https://mikaelaj.github.io/webshop/product.html?id=${product.id}`
 
                 productElement = `
                 <div class="col s12 m4">
